@@ -7,7 +7,7 @@ if (array_key_exists("honorid", $_GET)) {
 }
 checkPayload($data);
 $honor->honor_title = checkIndex($data, "honor_title");
-$honor->honor_image = checkIndex($data, "honor_image");
+$honor->honor_photo = checkIndex($data, "honor_photo");
 $honor->honor_is_active = 1;
 $honor->honor_publish_date = checkIndex($data, "honor_publish_date");
 $honor->honor_date = checkIndex($data, "honor_date");

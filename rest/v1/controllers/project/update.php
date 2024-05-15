@@ -17,6 +17,7 @@ if (array_key_exists("projectid", $_GET)) {
     $project->project_image_6 = checkIndex($data, "project_image_6");
     $project->project_category = checkIndex($data, "project_category");
     $project->project_description = checkIndex($data, "project_description");
+    $project->project_button = checkIndex($data, "project_button");
     $project->project_publish_date = checkIndex($data, "project_publish_date");
     $project->project_datetime = date("Y-m-d H:i:s");
     

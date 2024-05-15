@@ -1,5 +1,5 @@
 import React from 'react'
-import { baseImgUrl } from '../../../../helpers/functions-general'
+import { baseImgUrl, devBaseImgUrl } from '../../../../helpers/functions-general'
 import { MdOutlineHorizontalRule } from 'react-icons/md'
 import useQueryData from '../../../../custom-hook/useQueryData';
 
@@ -22,7 +22,7 @@ const About = () => {
         {about?.data.map((item, key) => (
         <div className="container grid grid-cols-2 gap-36 justify-center items-center place-items-center" key={key}>
               <div className='aboutme-image size-[500px]'>
-               <img src={item.about_image} alt="" />
+               <img src={`${devBaseImgUrl}/${item.about_photo}`} alt="" />
               </div>
               <div className='aboutme-content flex flex-col gap-10'>
                 <h2 className='flex gap-2 items-center text-accent text-2xl tracking-wide uppercase'><MdOutlineHorizontalRule />{item.about_title}</h2>

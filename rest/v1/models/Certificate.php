@@ -3,7 +3,7 @@
 Class Certificate {
     public $certificate_aid;
     public $certificate_title;
-    public $certificate_image;
+    public $certificate_photo;
     public $certificate_is_active;
     public $certificate_publish_date;
     public $certificate_date;
@@ -25,7 +25,7 @@ Class Certificate {
         try {
              $sql = "insert into {$this->tblCertificate} ";
              $sql .= "( certificate_title, ";
-             $sql .= "certificate_image, ";
+             $sql .= "certificate_photo, ";
              $sql .= "certificate_is_active, ";
              $sql .= "certificate_publish_date, ";
              $sql .= "certificate_date, ";
@@ -33,7 +33,7 @@ Class Certificate {
              $sql .= "certificate_created, ";
              $sql .= "certificate_datetime ) values ( ";
              $sql .= ":certificate_title, ";
-             $sql .= ":certificate_image, ";
+             $sql .= ":certificate_photo, ";
              $sql .= ":certificate_is_active, ";
              $sql .= ":certificate_publish_date, ";
              $sql .= ":certificate_date, ";
@@ -43,7 +43,7 @@ Class Certificate {
              $query = $this->connection->prepare($sql);
              $query->execute([
                 "certificate_title" => $this->certificate_title,
-                "certificate_image" => $this->certificate_image,
+                "certificate_photo" => $this->certificate_photo,
                 "certificate_is_active" => $this->certificate_is_active,
                 "certificate_publish_date" => $this->certificate_publish_date,
                 "certificate_date" => $this->certificate_date,
@@ -92,7 +92,7 @@ Class Certificate {
         try {
             $sql = "update {$this->tblCertificate} set ";
             $sql .= "certificate_title = :certificate_title, ";
-            $sql .= "certificate_image = :certificate_image, ";
+            $sql .= "certificate_photo = :certificate_photo, ";
             $sql .= "certificate_publish_date = :certificate_publish_date, ";
             $sql .= "certificate_date = :certificate_date, ";
             $sql .= "certificate_organization = :certificate_organization, ";
@@ -101,7 +101,7 @@ Class Certificate {
             $query = $this->connection->prepare($sql);
             $query->execute([
                 "certificate_title" => $this->certificate_title,
-                "certificate_image" => $this->certificate_image,
+                "certificate_photo" => $this->certificate_photo,
                 "certificate_publish_date" => $this->certificate_publish_date,
                 "certificate_date" => $this->certificate_date,
                 "certificate_organization" => $this->certificate_organization,

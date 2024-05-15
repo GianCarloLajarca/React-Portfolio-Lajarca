@@ -8,12 +8,12 @@ import { baseImgUrl } from '../../../../helpers/functions-general'
 const Footer = () => {
   return (
     <>
-        <footer class="footer bg-darkblue py-14">
-        <div class="container">
-        <div class="footer__wrapper text-light lg:grid lg:grid-cols-3 ml-56 gap-20 place-content-center">
-        <div class="footer__socials">
+        <footer className="footer bg-darkblue py-14">
+        <div className="container">
+        <div className="footer__wrapper text-light lg:grid lg:grid-cols-3 ml-56 gap-20 place-content-center">
+        <div className="footer__socials py-5 flex flex-col items-center lg:px-2 lg:py-0">
             <img src={`${baseImgUrl}/home/logo.png`} alt="" className=' object-contain size-24'/>
-            <p className='mb-5'>Copyright © 2024</p>
+            <p className='text-xs mb-5'>Copyright © 2024</p>
             <ul className='flex gap-[2rem]'>
                 <li><FaFacebook className='text-accent cursor-pointer text-2xl'/></li>
                 <li><FaLinkedin className='text-accent cursor-pointer text-2xl'/></li>
@@ -24,7 +24,7 @@ const Footer = () => {
 
             </ul>
         </div>
-        <div class="footer__links">
+        <div className="footer__links py-5 flex flex-col items-center lg:px-2 lg:py-0">
             <ul className='flex flex-col text-center gap-5'>
             <li><Link to="/home">Home</Link></li>
             <li><Link to="/skills">Skills</Link></li>
@@ -32,7 +32,7 @@ const Footer = () => {
             <li><Link to="/contact">Contact</Link></li>
             </ul>
         </div>
-        <div class="footer__contact">
+        <div className="footer__contact">
             <h2 className='mb-5'>CONTACT DETAILS</h2>
             <ul className='flex flex-col text-center lg:text-left gap-5'>
             <li className='flex items-center gap-5'><HiDevicePhoneMobile className='text-2xl'/> +63 928 688 9888</li>

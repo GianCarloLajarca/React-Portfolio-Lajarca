@@ -9,10 +9,17 @@ import { setError, setIsAdd, setMessage, setSuccess } from '../../../../../store
 import * as Yup from 'yup'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { queryData } from '../../../../helpers/queryData'
+import useUploadPhoto from '../../../../custom-hook/useUploadPhoto'
+import { devBaseImgUrl } from '../../../../helpers/functions-general'
 
 const ModalAddProject = ({itemEdit}) => {
     const{store, dispatch} = React.useContext(StoreContext);
     const handleClose = () => dispatch(setIsAdd(false));
+
+    const { uploadPhoto, handleChangePhoto, photo } = useUploadPhoto(
+        `/v1/upload/photo`,
+        dispatch
+      );
 
     const queryClient = useQueryClient();
     
@@ -57,6 +64,7 @@ const ModalAddProject = ({itemEdit}) => {
         project_category: Yup.string().required('Required'),
         project_thumbnail: Yup.string().required('Required'),
         project_description: Yup.string().required('Required'),
+        project_button: Yup.string().required('Required'),
         project_image_1: Yup.string().required('Required'),
         project_image_2: Yup.string().required('Required'),
         project_image_3: Yup.string().required('Required'),
@@ -114,6 +122,13 @@ const ModalAddProject = ({itemEdit}) => {
                               type="text"
                               name="project_description"
                               className='h-[10rem] resize-none'
+                          />
+                      </div>
+                      <div className="input-wrap">
+                      <InputText
+                              label="Button Name"
+                              type="text"
+                              name="project_button"
                           />
                       </div>
                       <div className="input-wrap">

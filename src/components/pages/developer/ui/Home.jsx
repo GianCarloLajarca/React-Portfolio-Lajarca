@@ -7,6 +7,8 @@ import Resume from './resume/Resume'
 import Certifications from './certifications/Certifications'
 import Footer from './footer/Footer'
 import Projects from './projects/Projects'
+import Calltoaction from './calltoaction/Calltoaction'
+import Contact from './contact/Contact'
 
 const Home = () => {
   return (
@@ -18,6 +20,8 @@ const Home = () => {
         <Resume/>
         <Certifications/>
         <Projects/>
+        <Calltoaction/>
+        <Contact/>
         <Footer/>
 
     </div>

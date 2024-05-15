@@ -8,7 +8,7 @@ if (array_key_exists("certificateid", $_GET)) {
     checkPayload($data);
     $certificate->certificate_aid = $_GET['certificateid'];
     $certificate->certificate_title = checkIndex($data, "certificate_title");
-    $certificate->certificate_image = checkIndex($data, "certificate_image");
+    $certificate->certificate_photo = checkIndex($data, "certificate_photo");
     $certificate->certificate_date = checkIndex($data, "certificate_date");
     $certificate->certificate_organization = checkIndex($data, "certificate_organization");
     $certificate->certificate_publish_date = checkIndex($data, "certificate_publish_date");

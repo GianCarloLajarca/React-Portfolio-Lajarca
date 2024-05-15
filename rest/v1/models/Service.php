@@ -3,7 +3,7 @@
 Class Service {
     public $service_aid;
     public $service_title;
-    public $service_image;
+    public $service_photo;
     public $service_is_active;
     public $service_publish_date;
     public $service_created;
@@ -23,13 +23,13 @@ Class Service {
         try {
              $sql = "insert into {$this->tblService} ";
              $sql .= "( service_title, ";
-             $sql .= "service_image, ";
+             $sql .= "service_photo, ";
              $sql .= "service_is_active, ";
              $sql .= "service_publish_date, ";
              $sql .= "service_created, ";
              $sql .= "service_datetime ) values ( ";
              $sql .= ":service_title, ";
-             $sql .= ":service_image, ";
+             $sql .= ":service_photo, ";
              $sql .= ":service_is_active, ";
              $sql .= ":service_publish_date, ";
              $sql .= ":service_created, ";
@@ -37,7 +37,7 @@ Class Service {
              $query = $this->connection->prepare($sql);
              $query->execute([
                 "service_title" => $this->service_title,
-                "service_image" => $this->service_image,
+                "service_photo" => $this->service_photo,
                 "service_is_active" => $this->service_is_active,
                 "service_publish_date" => $this->service_publish_date,
                 "service_created" => $this->service_created,
@@ -84,14 +84,14 @@ Class Service {
         try {
             $sql = "update {$this->tblService} set ";
             $sql .= "service_title = :service_title, ";
-            $sql .= "service_image = :service_image, ";
+            $sql .= "service_photo = :service_photo, ";
             $sql .= "service_publish_date = :service_publish_date, ";
             $sql .= "service_datetime = :service_datetime ";
             $sql .= "where service_aid  = :service_aid ";
             $query = $this->connection->prepare($sql);
             $query->execute([
                 "service_title" => $this->service_title,
-                "service_image" => $this->service_image,
+                "service_photo" => $this->service_photo,
                 "service_publish_date" => $this->service_publish_date,
                 "service_datetime" => $this->service_datetime,
                 "service_aid" => $this->service_aid,

@@ -8,7 +8,7 @@ if (array_key_exists("serviceid", $_GET)) {
     checkPayload($data);
     $service->service_aid = $_GET['serviceid'];
     $service->service_title = checkIndex($data, "service_title");
-    $service->service_image = checkIndex($data, "service_image");
+    $service->service_photo = checkIndex($data, "service_photo");
     $service->service_publish_date = checkIndex($data, "service_publish_date");
     $service->service_datetime = date("Y-m-d H:i:s");
     

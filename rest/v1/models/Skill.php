@@ -3,7 +3,7 @@
 Class Skill {
     public $skill_aid;
     public $skill_title;
-    public $skill_image;
+    public $skill_photo;
     public $skill_is_active;
     public $skill_publish_date;
     public $skill_description;
@@ -24,14 +24,14 @@ Class Skill {
         try {
              $sql = "insert into {$this->tblSkill} ";
              $sql .= "( skill_title, ";
-             $sql .= "skill_image, ";
+             $sql .= "skill_photo, ";
              $sql .= "skill_is_active, ";
              $sql .= "skill_publish_date, ";
              $sql .= "skill_description, ";
              $sql .= "skill_created, ";
              $sql .= "skill_datetime ) values ( ";
              $sql .= ":skill_title, ";
-             $sql .= ":skill_image, ";
+             $sql .= ":skill_photo, ";
              $sql .= ":skill_is_active, ";
              $sql .= ":skill_publish_date, ";
              $sql .= ":skill_description, ";
@@ -40,7 +40,7 @@ Class Skill {
              $query = $this->connection->prepare($sql);
              $query->execute([
                 "skill_title" => $this->skill_title,
-                "skill_image" => $this->skill_image,
+                "skill_photo" => $this->skill_photo,
                 "skill_is_active" => $this->skill_is_active,
                 "skill_publish_date" => $this->skill_publish_date,
                 "skill_description" => $this->skill_description,
@@ -88,7 +88,7 @@ Class Skill {
         try {
             $sql = "update {$this->tblSkill} set ";
             $sql .= "skill_title = :skill_title, ";
-            $sql .= "skill_image = :skill_image, ";
+            $sql .= "skill_photo = :skill_photo, ";
             $sql .= "skill_publish_date = :skill_publish_date, ";
             $sql .= "skill_description = :skill_description, ";
             $sql .= "skill_datetime = :skill_datetime ";
@@ -96,7 +96,7 @@ Class Skill {
             $query = $this->connection->prepare($sql);
             $query->execute([
                 "skill_title" => $this->skill_title,
-                "skill_image" => $this->skill_image,
+                "skill_photo" => $this->skill_photo,
                 "skill_publish_date" => $this->skill_publish_date,
                 "skill_description" => $this->skill_description,
                 "skill_datetime" => $this->skill_datetime,

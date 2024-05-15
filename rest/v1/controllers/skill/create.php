@@ -7,7 +7,7 @@ if (array_key_exists("skillid", $_GET)) {
 }
 checkPayload($data);
 $skill->skill_title = checkIndex($data, "skill_title");
-$skill->skill_image = checkIndex($data, "skill_image");
+$skill->skill_photo = checkIndex($data, "skill_photo");
 $skill->skill_is_active = 1;
 $skill->skill_publish_date = checkIndex($data, "skill_publish_date");
 $skill->skill_description = checkIndex($data, "skill_description");

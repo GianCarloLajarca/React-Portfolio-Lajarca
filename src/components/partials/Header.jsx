@@ -2,6 +2,7 @@ import React from 'react'
 import { CiBellOn } from 'react-icons/ci'
 import { LiaAngleDownSolid, LiaKeySolid, LiaSignOutAltSolid, LiaUserCircle } from 'react-icons/lia'
 import { Link } from 'react-router-dom'
+import { baseImgUrl } from '../helpers/functions-general'
 
 const Header = () => {
 
@@ -20,7 +21,7 @@ const Header = () => {
     <header className='header px-4 py-3 border-b border-line'>
         <div className='flex justify-end items-center gap-4 w-full relative'>
             <button className='text-3xl' onClick={() => handleChangeColorTheme('dark')}><CiBellOn/></button>
-            <img src="https://via.placeholder.com/40x40" alt="" className='size-[40px] rounded-full object-cover'/>
+            <img src={`${baseImgUrl}/home/profile.jpg`} alt="" className='size-[40px] rounded-full object-cover'/>
             <div>
                 <button className='flex items-center gap-5'>Gian Carlo Lajarca <LiaAngleDownSolid /></button>
                 <div className='hidden header-dropdown absolute bg-secondary p-4 rounded-md right-0 top-[calc(100%+10px)] text-center shadow-xs'>

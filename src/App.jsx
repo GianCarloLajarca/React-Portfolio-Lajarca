@@ -10,6 +10,11 @@ import Honor from "./components/pages/developer/dashboard/honor/Honor"
 import Top from "./components/pages/developer/dashboard/top/Top"
 import Certificate from "./components/pages/developer/dashboard/certificate/Certificate"
 import Project from "./components/pages/developer/dashboard/project/Project"
+import Banner from "./components/pages/developer/dashboard/banner/Banner"
+import Education from "./components/pages/developer/dashboard/education/Education"
+import Cta from "./components/pages/developer/dashboard/cta/Cta"
+import Welcome from "./components/pages/developer/dashboard/welcome/Welcome"
+import Contact from "./components/pages/developer/dashboard/contact/Contact"
 
 const App = () => {
   const queryClient = new QueryClient
@@ -19,6 +24,7 @@ const App = () => {
         <StoreProvider>
           <Router>
                 <Routes>
+                  <Route path="/dashboard" element={<Welcome/>}/>
                   <Route path="/home" element={<Home/>}/>
                   <Route path="/skill" element={<Skill/>}/>
                   <Route path="/service" element={<Service/>}/>
@@ -28,6 +34,10 @@ const App = () => {
                   <Route path="/top" element={<Top/>}/>
                   <Route path="/certificate" element={<Certificate/>}/>
                   <Route path="/project" element={<Project/>}/>
+                  <Route path="/banner" element={<Banner/>}/>
+                  <Route path="/education" element={<Education/>}/>
+                  <Route path="/cta" element={<Cta/>}/>
+                  <Route path="/contact" element={<Contact/>}/>
                 </Routes>
           </Router>
         </StoreProvider>

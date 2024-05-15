@@ -7,7 +7,7 @@ if (array_key_exists("aboutid", $_GET)) {
 }
 checkPayload($data);
 $about->about_title = checkIndex($data, "about_title");
-$about->about_image = checkIndex($data, "about_image");
+$about->about_photo = checkIndex($data, "about_photo");
 $about->about_is_active = 1;
 $about->about_publish_date = checkIndex($data, "about_publish_date");
 $about->about_description = checkIndex($data, "about_description");

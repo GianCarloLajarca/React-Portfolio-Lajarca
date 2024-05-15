@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from "react-slick";
-import { baseImgUrl } from '../../../../helpers/functions-general';
+import { baseImgUrl, devBaseImgUrl } from '../../../../helpers/functions-general';
 import useQueryData from '../../../../custom-hook/useQueryData';
 
 const SliderSkills = () => {
@@ -36,7 +36,7 @@ const SliderSkills = () => {
             {skill?.data.map((item, key) => (
                 <div className='skills-card p-5 text-center bg-darkblue shadow-md h-[400px]' key={key}>
                     <div className='flex flex-col gap-4 p-12'>
-                    <img src={item.skill_image} alt="" className='w-[7rem] h-[6rem] mx-auto object-contain'/>
+                    <img src={`${devBaseImgUrl}/${item.skill_photo}`} alt="" className='w-[7rem] h-[6rem] mx-auto object-contain'/>
                         <h3>{item.skill_title}</h3>
                         <p>{item.skill_description}</p>
                     </div>   

@@ -3,7 +3,7 @@
 Class Top {
     public $top_aid;
     public $top_title;
-    public $top_image;
+    public $top_photo;
     public $top_is_active;
     public $top_publish_date;
     public $top_date;
@@ -25,7 +25,7 @@ Class Top {
         try {
              $sql = "insert into {$this->tblTop} ";
              $sql .= "( top_title, ";
-             $sql .= "top_image, ";
+             $sql .= "top_photo, ";
              $sql .= "top_is_active, ";
              $sql .= "top_publish_date, ";
              $sql .= "top_date, ";
@@ -33,7 +33,7 @@ Class Top {
              $sql .= "top_created, ";
              $sql .= "top_datetime ) values ( ";
              $sql .= ":top_title, ";
-             $sql .= ":top_image, ";
+             $sql .= ":top_photo, ";
              $sql .= ":top_is_active, ";
              $sql .= ":top_publish_date, ";
              $sql .= ":top_date, ";
@@ -43,7 +43,7 @@ Class Top {
              $query = $this->connection->prepare($sql);
              $query->execute([
                 "top_title" => $this->top_title,
-                "top_image" => $this->top_image,
+                "top_photo" => $this->top_photo,
                 "top_is_active" => $this->top_is_active,
                 "top_publish_date" => $this->top_publish_date,
                 "top_date" => $this->top_date,
@@ -92,7 +92,7 @@ Class Top {
         try {
             $sql = "update {$this->tblTop} set ";
             $sql .= "top_title = :top_title, ";
-            $sql .= "top_image = :top_image, ";
+            $sql .= "top_photo = :top_photo, ";
             $sql .= "top_publish_date = :top_publish_date, ";
             $sql .= "top_date = :top_date, ";
             $sql .= "top_giver = :top_giver, ";
@@ -101,7 +101,7 @@ Class Top {
             $query = $this->connection->prepare($sql);
             $query->execute([
                 "top_title" => $this->top_title,
-                "top_image" => $this->top_image,
+                "top_photo" => $this->top_photo,
                 "top_publish_date" => $this->top_publish_date,
                 "top_date" => $this->top_date,
                 "top_giver" => $this->top_giver,

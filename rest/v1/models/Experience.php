@@ -3,7 +3,7 @@
 Class Experience {
     public $experience_aid;
     public $experience_title;
-    public $experience_image;
+    public $experience_photo;
     public $experience_is_active;
     public $experience_publish_date;
     public $experience_description;
@@ -26,7 +26,7 @@ Class Experience {
         try {
              $sql = "insert into {$this->tblExperience} ";
              $sql .= "( experience_title, ";
-             $sql .= "experience_image, ";
+             $sql .= "experience_photo, ";
              $sql .= "experience_is_active, ";
              $sql .= "experience_publish_date, ";
              $sql .= "experience_description, ";
@@ -35,7 +35,7 @@ Class Experience {
              $sql .= "experience_created, ";
              $sql .= "experience_datetime ) values ( ";
              $sql .= ":experience_title, ";
-             $sql .= ":experience_image, ";
+             $sql .= ":experience_photo, ";
              $sql .= ":experience_is_active, ";
              $sql .= ":experience_publish_date, ";
              $sql .= ":experience_description, ";
@@ -46,7 +46,7 @@ Class Experience {
              $query = $this->connection->prepare($sql);
              $query->execute([
                 "experience_title" => $this->experience_title,
-                "experience_image" => $this->experience_image,
+                "experience_photo" => $this->experience_photo,
                 "experience_is_active" => $this->experience_is_active,
                 "experience_publish_date" => $this->experience_publish_date,
                 "experience_description" => $this->experience_description,
@@ -96,7 +96,7 @@ Class Experience {
         try {
             $sql = "update {$this->tblExperience} set ";
             $sql .= "experience_title = :experience_title, ";
-            $sql .= "experience_image = :experience_image, ";
+            $sql .= "experience_photo = :experience_photo, ";
             $sql .= "experience_publish_date = :experience_publish_date, ";
             $sql .= "experience_description = :experience_description, ";
             $sql .= "experience_date = :experience_date, ";
@@ -106,7 +106,7 @@ Class Experience {
             $query = $this->connection->prepare($sql);
             $query->execute([
                 "experience_title" => $this->experience_title,
-                "experience_image" => $this->experience_image,
+                "experience_photo" => $this->experience_photo,
                 "experience_publish_date" => $this->experience_publish_date,
                 "experience_description" => $this->experience_description,
                 "experience_date" => $this->experience_date,

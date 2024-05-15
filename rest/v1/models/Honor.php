@@ -3,7 +3,7 @@
 Class Honor {
     public $honor_aid;
     public $honor_title;
-    public $honor_image;
+    public $honor_photo;
     public $honor_is_active;
     public $honor_publish_date;
     public $honor_date;
@@ -25,7 +25,7 @@ Class Honor {
         try {
              $sql = "insert into {$this->tblHonor} ";
              $sql .= "( honor_title, ";
-             $sql .= "honor_image, ";
+             $sql .= "honor_photo, ";
              $sql .= "honor_is_active, ";
              $sql .= "honor_publish_date, ";
              $sql .= "honor_date, ";
@@ -33,7 +33,7 @@ Class Honor {
              $sql .= "honor_created, ";
              $sql .= "honor_datetime ) values ( ";
              $sql .= ":honor_title, ";
-             $sql .= ":honor_image, ";
+             $sql .= ":honor_photo, ";
              $sql .= ":honor_is_active, ";
              $sql .= ":honor_publish_date, ";
              $sql .= ":honor_date, ";
@@ -43,7 +43,7 @@ Class Honor {
              $query = $this->connection->prepare($sql);
              $query->execute([
                 "honor_title" => $this->honor_title,
-                "honor_image" => $this->honor_image,
+                "honor_photo" => $this->honor_photo,
                 "honor_is_active" => $this->honor_is_active,
                 "honor_publish_date" => $this->honor_publish_date,
                 "honor_date" => $this->honor_date,
@@ -92,7 +92,7 @@ Class Honor {
         try {
             $sql = "update {$this->tblHonor} set ";
             $sql .= "honor_title = :honor_title, ";
-            $sql .= "honor_image = :honor_image, ";
+            $sql .= "honor_photo = :honor_photo, ";
             $sql .= "honor_publish_date = :honor_publish_date, ";
             $sql .= "honor_date = :honor_date, ";
             $sql .= "honor_giver = :honor_giver, ";
@@ -101,7 +101,7 @@ Class Honor {
             $query = $this->connection->prepare($sql);
             $query->execute([
                 "honor_title" => $this->honor_title,
-                "honor_image" => $this->honor_image,
+                "honor_photo" => $this->honor_photo,
                 "honor_publish_date" => $this->honor_publish_date,
                 "honor_date" => $this->honor_date,
                 "honor_giver" => $this->honor_giver,

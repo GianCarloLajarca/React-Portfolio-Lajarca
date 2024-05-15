@@ -1,5 +1,5 @@
 import React from 'react'
-import { baseImgUrl } from '../../../../helpers/functions-general'
+import { baseImgUrl, devBaseImgUrl } from '../../../../helpers/functions-general'
 import useQueryData from '../../../../custom-hook/useQueryData';
 
 const CertificationsFoundation = () => {
@@ -21,7 +21,7 @@ const CertificationsFoundation = () => {
         <div className='cert-card pb-44 pt-5 px-10' key={key}>
             <div className='cert-image bg-primary'>
                 {/* <img src={`${baseImgUrl}/home/cert-1.jpg`} alt="" className=' object-cover'/> */}
-                <a href={item.certificate_image} data-lightbox="image-1" data-title={item.certificate_title}><img src={item.certificate_image} alt="" className=' object-cover'/></a>
+                <a href={`${devBaseImgUrl}/${item.certificate_photo}`} data-lightbox="image-1" data-title={item.certificate_title}><img src={`${devBaseImgUrl}/${item.certificate_photo}`} alt="" className=' object-cover'/></a>
                 
             </div>
             <div className='cert-details flex flex-col gap-5 mt-5'>

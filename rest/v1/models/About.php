@@ -3,7 +3,7 @@
 Class About {
     public $about_aid;
     public $about_title;
-    public $about_image;
+    public $about_photo;
     public $about_is_active;
     public $about_publish_date;
     public $about_description;
@@ -31,7 +31,7 @@ Class About {
         try {
              $sql = "insert into {$this->tblAbout} ";
              $sql .= "( about_title, ";
-             $sql .= "about_image, ";
+             $sql .= "about_photo, ";
              $sql .= "about_is_active, ";
              $sql .= "about_publish_date, ";
              $sql .= "about_description, ";
@@ -45,7 +45,7 @@ Class About {
              $sql .= "about_created, ";
              $sql .= "about_datetime ) values ( ";
              $sql .= ":about_title, ";
-             $sql .= ":about_image, ";
+             $sql .= ":about_photo, ";
              $sql .= ":about_is_active, ";
              $sql .= ":about_publish_date, ";
              $sql .= ":about_description, ";
@@ -61,7 +61,7 @@ Class About {
              $query = $this->connection->prepare($sql);
              $query->execute([
                 "about_title" => $this->about_title,
-                "about_image" => $this->about_image,
+                "about_photo" => $this->about_photo,
                 "about_is_active" => $this->about_is_active,
                 "about_publish_date" => $this->about_publish_date,
                 "about_description" => $this->about_description,
@@ -116,7 +116,7 @@ Class About {
         try {
             $sql = "update {$this->tblAbout} set ";
             $sql .= "about_title = :about_title, ";
-            $sql .= "about_image = :about_image, ";
+            $sql .= "about_photo = :about_photo, ";
             $sql .= "about_publish_date = :about_publish_date, ";
             $sql .= "about_description = :about_description, ";
             $sql .= "about_detail = :about_detail, ";
@@ -131,7 +131,7 @@ Class About {
             $query = $this->connection->prepare($sql);
             $query->execute([
                 "about_title" => $this->about_title,
-                "about_image" => $this->about_image,
+                "about_photo" => $this->about_photo,
                 "about_publish_date" => $this->about_publish_date,
                 "about_description" => $this->about_description,
                 "about_detail" => $this->about_detail,

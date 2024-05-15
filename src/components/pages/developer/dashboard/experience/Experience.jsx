@@ -12,10 +12,11 @@ import ModalAddExperience from './ModalAddExperience'
 import { Link } from 'react-router-dom'
 import { SiAboutdotme } from 'react-icons/si'
 import { IoIosBriefcase } from 'react-icons/io'
-import { GiSkills } from 'react-icons/gi'
+import { GiGraduateCap, GiSkills, GiVerticalBanner } from 'react-icons/gi'
 import { IoPersonSharp } from 'react-icons/io5'
 import { FaCertificate } from 'react-icons/fa'
 import { GrProjects } from 'react-icons/gr'
+import { MdContactPage, MdDashboard, MdOutlineCallToAction } from 'react-icons/md'
 
 const Experience = () => {
 
@@ -48,14 +49,19 @@ const Experience = () => {
         <aside className='px-4 py-6 w-[250px] text-primary h-screen border-r border-line'>
             <Navigation/>
         <ul className='nav'>
+            <li className='nav-link'><Link to="/dashboard"><MdDashboard />Dashboard</Link></li>
+            <li className='nav-link'><Link to="/banner"><GiVerticalBanner />Banner</Link></li>
             <li className='nav-link'><Link to="/about"><SiAboutdotme/>About</Link></li>
             <li className='nav-link'><Link to="/service"><IoIosBriefcase/>Services</Link></li>
             <li className='nav-link'><Link to="/skill"><GiSkills/>Skills</Link></li>
+            <li className='nav-link'><Link to="/education"><GiGraduateCap />Education</Link></li>
             <li className='nav-link active'><Link to="/experience"><IoPersonSharp/>Experience</Link></li>
             <li className='nav-link'><Link to="/honor"><FaCertificate/>Honor Certifications</Link></li>
             <li className='nav-link'><Link to="/top"><FaCertificate/>Top Student Certifications</Link></li>
             <li className='nav-link'><Link to="/certificate"><FaCertificate/>Foundation Certifications</Link></li>
             <li className='nav-link'><Link to="/project"><GrProjects/>Projects</Link></li>
+            <li className='nav-link'><Link to="/cta"><MdOutlineCallToAction/>Call To Action</Link></li>
+            <li className='nav-link'><Link to="/contact"><MdContactPage/>Contact</Link></li>
         </ul>
 
         </aside>
@@ -69,9 +75,8 @@ const Experience = () => {
                     
                 </div>
 
-                <div className='tab flex justify-between items-center mt-8 border-b border-line mb-8'>
-                    <h2>Search</h2>
-                    <button className='btn btn--accent' onClick={handleAdd}>
+                <div className='tab flex justify-end items-center mt-8 border-b border-line mb-8 pb-4'>
+                    <button className='btn btn--accent text-primary border border-accent hover:bg-primary hover:text-accent hover:border hover:border-accent' onClick={handleAdd}>
                         <FiPlus /> New
                     </button>
                 </div>

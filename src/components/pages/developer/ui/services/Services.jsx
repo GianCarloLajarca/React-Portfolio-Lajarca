@@ -3,6 +3,7 @@ import { FaCode } from 'react-icons/fa'
 import { IoDiamondSharp } from 'react-icons/io5'
 import { MdOutlineDevices } from 'react-icons/md'
 import useQueryData from '../../../../custom-hook/useQueryData'
+import { devBaseImgUrl } from '../../../../helpers/functions-general'
 
 const Services = () => {
         const {
@@ -43,7 +44,7 @@ const Services = () => {
                                         w-72 h-56 px-[30px] py-[30px]
                                         [transition:all_0.3s_ease-in] relative z-0 hover:bg-accent hover:text-darkblue transition-all hover:bg-opacity-70'>
                                             <div className="icon text-[52px] leading-[62px] text-[#fff] mb-[18px] box-border visible text-center">
-                                                        <img src={item.service_image} alt="" className='w-[6rem] h-[6rem] mx-auto object-contain'/>
+                                                        <img src={`${devBaseImgUrl}/${item.service_photo}`} alt="" className='w-[6rem] h-[6rem] mx-auto object-contain'/>
                                             </div>
 
                                             <div className="service-card-content box-border visible text-center text-[16px] text-[#818181] font-[400] leading-[1.5]">

@@ -79,7 +79,7 @@ const CertificateTable = ({isLoading, isFetching, certificate, setItemEdit}) => 
                 <td>{item.certificate_title}</td>
                 <td>{item.certificate_date}</td>
                 <td>{item.certificate_organization}</td>
-                <td>{item.certificate_image}</td>
+                <td>{item.certificate_photo}</td>
                 <td>{item.certificate_publish_date}</td>
                 <td className='table-action'>
                     <ul>

@@ -79,7 +79,7 @@ const TopTable = ({isLoading, isFetching, top, setItemEdit}) => {
                 <td>{item.top_title}</td>
                 <td>{item.top_date}</td>
                 <td>{item.top_giver}</td>
-                <td>{item.top_image}</td>
+                <td>{item.top_photo}</td>
                 <td>{item.top_publish_date}</td>
                 <td className='table-action'>
                     <ul>

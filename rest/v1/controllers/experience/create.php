@@ -7,7 +7,7 @@ if (array_key_exists("experienceid", $_GET)) {
 }
 checkPayload($data);
 $experience->experience_title = checkIndex($data, "experience_title");
-$experience->experience_image = checkIndex($data, "experience_image");
+$experience->experience_photo = checkIndex($data, "experience_photo");
 $experience->experience_is_active = 1;
 $experience->experience_publish_date = checkIndex($data, "experience_publish_date");
 $experience->experience_description = checkIndex($data, "experience_description");

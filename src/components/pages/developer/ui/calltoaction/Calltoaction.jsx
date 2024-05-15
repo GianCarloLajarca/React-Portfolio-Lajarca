@@ -1,16 +1,27 @@
 import React from 'react'
+import useQueryData from '../../../../custom-hook/useQueryData';
 
 const Calltoaction = () => {
+  const {
+    data: cta,
+  } = useQueryData(
+   "/v1/cta", // endpoint
+   "get", // method
+    "cta", // key
+  );
+
   return (
     <>
         <section className='cta bg-darkblue py-28'>
-            <div className='cta-content flex flex-col gap-12 text-center'>
-                <h3 className='text-2xl text-stone-400'>Have any project in Mind ?</h3>
-                <h2 className='text-6xl text-accent font-extralight'>Just Say Hello !</h2>
+        {cta?.data.map((item, key) => (
+            <div className='cta-content flex flex-col gap-12 text-center' key={key}>
+                <h3 className='text-2xl text-stone-400'>{item.cta_subtitle}</h3>
+                <h2 className='text-6xl text-accent font-extralight'>{item.cta_title}</h2>
             
-                <button className='py-4 px-10 uppercase bg-accent text-primary font-thick w-48 mx-auto'>Hire Me</button>
+                <button className='py-4 px-10 uppercase bg-accent text-primary font-thick w-48 mx-auto'>{item.cta_button}</button>
 
-            </div>               
+            </div>      
+             ))}           
         </section>
     </>
   )

@@ -8,7 +8,7 @@ if (array_key_exists("topid", $_GET)) {
     checkPayload($data);
     $top->top_aid = $_GET['topid'];
     $top->top_title = checkIndex($data, "top_title");
-    $top->top_image = checkIndex($data, "top_image");
+    $top->top_photo = checkIndex($data, "top_photo");
     $top->top_publish_date = checkIndex($data, "top_publish_date");
     $top->top_date = checkIndex($data, "top_date");
     $top->top_giver = checkIndex($data, "top_giver");

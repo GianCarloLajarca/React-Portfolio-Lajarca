@@ -2,17 +2,24 @@ import React from 'react'
 import ModalWrapper from '../../../../partials/modals/ModalWrapper'
 import { LiaTimesSolid } from 'react-icons/lia'
 import { Formik, Form } from 'formik'
-import { InputText,InputTextArea } from '../../../../helpers/FormInputs'
+import { InputFileUpload, InputText } from '../../../../helpers/FormInputs'
 import SpinnerButton from '../../../../partials/spinners/SpinnerButton'
 import { StoreContext } from '../../../../../store/StoreContext'
 import { setError, setIsAdd, setMessage, setSuccess } from '../../../../../store/StoreAction'
 import * as Yup from 'yup'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { queryData } from '../../../../helpers/queryData'
+import useUploadPhoto from '../../../../custom-hook/useUploadPhoto'
+import { devBaseImgUrl } from '../../../../helpers/functions-general'
 
 const ModalAddTop = ({itemEdit}) => {
     const{store, dispatch} = React.useContext(StoreContext);
     const handleClose = () => dispatch(setIsAdd(false));
+
+    const { uploadPhoto, handleChangePhoto, photo } = useUploadPhoto(
+        `/v1/upload/photo`,
+        dispatch
+      );
 
     const queryClient = useQueryClient();
     
@@ -39,7 +46,7 @@ const ModalAddTop = ({itemEdit}) => {
 
     const initVal = {
         top_title: itemEdit ? itemEdit.top_title : "",
-        top_image: itemEdit ? itemEdit.top_image : "",
+        top_photo: itemEdit ? itemEdit.top_photo : "",
         top_date: itemEdit ? itemEdit.top_date : "",
         top_giver: itemEdit ? itemEdit.top_giver : "",
         top_publish_date: itemEdit ? itemEdit.top_publish_date : "",
@@ -47,7 +54,7 @@ const ModalAddTop = ({itemEdit}) => {
 
     const yupSchema = Yup.object({
         top_title: Yup.string().required('Required'),
-        top_image: Yup.string().required('Required'),
+        // top_photo: Yup.string().required('Required'),
         top_date: Yup.string().required('Required'),
         top_giver: Yup.string().required('Required'),
         top_publish_date: Yup.string().required('Required'),
@@ -65,14 +72,69 @@ const ModalAddTop = ({itemEdit}) => {
                       initialValues={initVal}
                       validationSchema={yupSchema}
                       onSubmit={async (values) => {
-                          mutation.mutate(values)
+                        uploadPhoto()
+                        mutation.mutate({...values, 
+                            top_photo:
+                            (itemEdit && itemEdit.top_photo === "") || photo
+                              ? photo === null
+                                ? itemEdit.top_photo
+                                : photo.name
+                              : values.top_photo,})
                       }}
                   >
                       {(props) => {
                           return (
                       <Form  className='flex flex-col h-[calc(100vh-110px)]'>
                       <div className='grow overflow-y-auto'>
-                          
+                       
+                      <div className="input-wrap">
+
+                            {photo || (itemEdit && itemEdit.top_photo !== "") ? (
+                            <img
+                            src={
+                            photo
+                            ? URL.createObjectURL(photo) // preview
+                            : itemEdit.top_photo // check db
+                            ? devBaseImgUrl + "/" + itemEdit.top_photo
+                            : null
+                            }
+                            alt="Photo"
+                            className="rounded-tr-md rounded-tl-md h-[200px] max-h-[200px] w-full object-cover object-center m-auto"
+                            />
+                            ) : (
+                            <span className="min-h-20 flex items-center justify-center">
+                            <span className="text-accent mr-1">Drag & Drop</span>{" "}
+                            photo here or{" "}
+                            <span className="text-accent ml-1">Browse</span>
+                            </span>
+                            )}
+
+                            {(photo !== null ||
+                            (itemEdit && itemEdit.top_photo !== "")) && (
+                            <span className="min-h-10 flex items-center justify-center">
+                            <span className="text-accent mr-1">Drag & Drop</span>{" "}
+                            photo here or{" "}
+                            <span className="text-accent ml-1">Browse</span>
+                            </span>
+                            )}
+
+                            {/* <FaUpload className="opacity-100 duration-200 group-hover:opacity-100 fill-dark/70 absolute top-0 right-0 bottom-0 left-0 min-w-[1.2rem] min-h-[1.2rem] max-w-[1.2rem] max-h-[1.2rem] m-auto cursor-pointer" /> */}
+                            <InputFileUpload
+                            label="Photo"
+                            name="photo"
+                            type="file"
+                            id="myFile"
+                            accept="image/*"
+                            title="Upload photo"
+                            onChange={(e) => handleChangePhoto(e)}
+                            onDrop={(e) => handleChangePhoto(e)}
+                            className="opacity-0 absolute right-0 bottom-0 left-0 m-auto cursor-pointer h-full "
+                            />
+
+
+
+                            </div>
+
                       <div className="input-wrap">
                           <InputText
                               label="Title"
@@ -88,13 +150,6 @@ const ModalAddTop = ({itemEdit}) => {
                           />
                       </div>
 
-                      <div className="input-wrap">
-                      <InputText
-                              label="Image"
-                              type="text"
-                              name="top_image"
-                          />
-                      </div>
                       <div className="input-wrap">
                       <InputText
                               label="Date Given"

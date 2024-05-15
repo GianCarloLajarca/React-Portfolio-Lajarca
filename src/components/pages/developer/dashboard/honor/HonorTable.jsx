@@ -79,7 +79,7 @@ const HonorTable = ({isLoading, isFetching, honor, setItemEdit}) => {
                 <td>{item.honor_title}</td>
                 <td>{item.honor_date}</td>
                 <td>{item.honor_giver}</td>
-                <td>{item.honor_image}</td>
+                <td>{item.honor_photo}</td>
                 <td>{item.honor_publish_date}</td>
                 <td className='table-action'>
                     <ul>
