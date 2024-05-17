@@ -5,7 +5,7 @@ import { LiaTimesSolid } from 'react-icons/lia';
 import * as Yup from 'yup';
 import { setError, setIsAdd, setMessage, setSuccess } from '../../../../../store/StoreAction';
 import { StoreContext } from '../../../../../store/StoreContext';
-import { InputFileUpload, InputText } from '../../../../helpers/FormInputs';
+import { InputFileUpload, InputText, InputTextArea } from '../../../../helpers/FormInputs';
 import { queryData } from '../../../../helpers/queryData';
 import ModalWrapper from '../../../../partials/modals/ModalWrapper';
 import SpinnerButton from '../../../../partials/spinners/SpinnerButton';
@@ -47,12 +47,16 @@ const ModalAddService = ({itemEdit}) => {
     const initVal = {
         service_title: itemEdit ? itemEdit.service_title : "",
         service_photo: itemEdit ? itemEdit.service_photo : "",
+        service_description: itemEdit ? itemEdit.service_description : "",
+        service_button: itemEdit ? itemEdit.service_button : "",
         service_publish_date: itemEdit ? itemEdit.service_publish_date : "",
     }
 
     const yupSchema = Yup.object({
         service_title: Yup.string().required('Required'),
         // service_photo: Yup.string().required('Required'),
+        service_description: Yup.string().required('Required'),
+        service_button: Yup.string().required('Required'),
         service_publish_date: Yup.string().required('Required'),
     })
   return (
@@ -137,14 +141,29 @@ const ModalAddService = ({itemEdit}) => {
                       </div>
 
                       <div className="input-wrap">
+                      <InputTextArea
+                              label="Service Description"
+                              type="text"
+                              name="service_description"
+                              className='h-[10rem] resize-none'
+                          />
+                      </div>
+
+                      <div className="input-wrap">
+                          <InputText
+                              label="Button Name"
+                              type="text"
+                              name="service_button"
+                          />
+                      </div>
+
+                      <div className="input-wrap">
                           <InputText
                               label="Publish Date"
                               type="text"
                               name="service_publish_date"
                           />
                       </div>
-
-                    
                       </div>
 
                       <div className='form-action'>

@@ -9,6 +9,8 @@ if (array_key_exists("serviceid", $_GET)) {
     $service->service_aid = $_GET['serviceid'];
     $service->service_title = checkIndex($data, "service_title");
     $service->service_photo = checkIndex($data, "service_photo");
+    $service->service_description = checkIndex($data, "service_description");
+    $service->service_button = checkIndex($data, "service_button");
     $service->service_publish_date = checkIndex($data, "service_publish_date");
     $service->service_datetime = date("Y-m-d H:i:s");
     
