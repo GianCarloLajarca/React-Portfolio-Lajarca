@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 15, 2024 at 03:46 AM
+-- Generation Time: May 17, 2024 at 06:58 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -119,27 +119,21 @@ INSERT INTO `certificate` (`certificate_aid`, `certificate_title`, `certificate_
 
 CREATE TABLE `contact` (
   `contact_aid` int(11) NOT NULL,
-  `contact_title` varchar(100) NOT NULL,
-  `contact_paragraph` text NOT NULL,
-  `contact_is_active` tinyint(1) NOT NULL,
-  `contact_publish_date` varchar(20) NOT NULL,
-  `contact_phone` varchar(100) NOT NULL,
-  `contact_emailaddress` varchar(100) NOT NULL,
-  `contact_address` varchar(100) NOT NULL,
-  `contact_button` varchar(100) NOT NULL,
   `contact_name` varchar(100) NOT NULL,
   `contact_email` varchar(100) NOT NULL,
+  `contact_is_active` tinyint(1) NOT NULL,
   `contact_message` text NOT NULL,
-  `contact_created` varchar(20) NOT NULL,
-  `contact_datetime` varchar(20) NOT NULL
+  `contact_datetime` varchar(20) NOT NULL,
+  `contact_created` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `contact`
 --
 
-INSERT INTO `contact` (`contact_aid`, `contact_title`, `contact_paragraph`, `contact_is_active`, `contact_publish_date`, `contact_phone`, `contact_emailaddress`, `contact_address`, `contact_button`, `contact_name`, `contact_email`, `contact_message`, `contact_created`, `contact_datetime`) VALUES
-(2, 'Contact', 'Have questions or inquiries? Feel free to reach out to me using the contact form below or through the provided contact details. I\\\\\\\'m always eager to hear from you and assist in any way I can.', 1, '15/05/2024', '+63 928 688 9888', 'gianlajarca14@gmail.com', 'Brgy. Anilao-Labac, Lipa City Batangas', 'Hire Me', 'Gian Carlo Lajarca', 'gianlajarca14@gmail.com', 'Hello', '2024-05-15 07:55:29', '2024-05-15 08:46:42');
+INSERT INTO `contact` (`contact_aid`, `contact_name`, `contact_email`, `contact_is_active`, `contact_message`, `contact_datetime`, `contact_created`) VALUES
+(3, 'Gian Carlo Lajarca', 'gianlajarca14@gmail.com', 1, 'I have an inquiry about a project', '2024-05-15 20:52:14', '2024-05-15 20:52:14'),
+(4, 'Kim Chaewon', 'kimchaewon@gmail.com', 1, 'Hi Im Chaewon', '2024-05-15 20:56:52', '2024-05-15 20:56:45');
 
 -- --------------------------------------------------------
 
@@ -258,7 +252,7 @@ CREATE TABLE `project` (
   `project_aid` int(11) NOT NULL,
   `project_title` varchar(50) NOT NULL,
   `project_thumbnail` varchar(100) NOT NULL,
-  `project_category` varchar(20) NOT NULL,
+  `project_category` varchar(500) NOT NULL,
   `project_is_active` tinyint(1) NOT NULL,
   `project_publish_date` varchar(20) NOT NULL,
   `project_description` text NOT NULL,
@@ -279,13 +273,19 @@ CREATE TABLE `project` (
 
 INSERT INTO `project` (`project_aid`, `project_title`, `project_thumbnail`, `project_category`, `project_is_active`, `project_publish_date`, `project_description`, `project_button`, `project_image_1`, `project_image_2`, `project_image_3`, `project_image_4`, `project_image_5`, `project_image_6`, `project_created`, `project_datetime`) VALUES
 (2, 'WonderTour', '../../img/home/projects-7.png', 'Wordpress / SASS', 1, '14/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/projects-7.png', '../../img/home/project-1-modal-1.png', '../../img/home/project-1-modal-2.png', '../../img/home/project-1-modal-3.png', '../../img/home/project-1-modal-4.png', '../../img/home/project-1-modal-5.png', '2024-05-14 07:27:36', '2024-05-14 08:22:54'),
-(3, 'Netflix', '../../img/home/projects-8.png', 'Tailwind CSS / React', 1, '13/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-2-modal-1.png', '../../img/home/project-2-modal-2.png', '../../img/home/project-2-modal-3.png', '../../img/home/project-2-modal-4.png', '../../img/home/project-2-modal-5.png', '../../img/home/project-2-modal-6.png', '2024-05-14 07:34:21', '2024-05-14 08:22:58'),
-(4, 'Starbucks', '../../img/home/projects-10.png', 'Tailwind CSS / React', 1, '14/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-3-modal-1.png', '../../img/home/project-3-modal-2.png', '../../img/home/project-3-modal-3.png', '../../img/home/project-3-modal-4.png', '../../img/home/project-3-modal-5.png', '../../img/home/project-3-modal-6.png', '2024-05-14 07:41:35', '2024-05-14 08:23:06'),
-(5, 'Youtube', '../../img/home/projects-9.png', 'Tailwind CSS / React', 1, '14/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-4-modal-1.png', '../../img/home/project-4-modal-2.png', '../../img/home/project-4-modal-3.png', '../../img/home/project-4-modal-4.png', '../../img/home/project-4-modal-5.png', '../../img/home/project-4-modal-6.png', '2024-05-14 07:48:13', '2024-05-14 07:48:13'),
+(3, 'Netflix', '../../img/home/projects-8.png', 'Tailwind CSS / React JS', 1, '13/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-2-modal-1.png', '../../img/home/project-2-modal-2.png', '../../img/home/project-2-modal-3.png', '../../img/home/project-2-modal-4.png', '../../img/home/project-2-modal-5.png', '../../img/home/project-2-modal-6.png', '2024-05-14 07:34:21', '2024-05-16 23:19:13'),
+(4, 'Starbucks', '../../img/home/projects-10.png', 'Tailwind CSS / React JS', 1, '14/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-3-modal-1.png', '../../img/home/project-3-modal-2.png', '../../img/home/project-3-modal-3.png', '../../img/home/project-3-modal-4.png', '../../img/home/project-3-modal-5.png', '../../img/home/project-3-modal-6.png', '2024-05-14 07:41:35', '2024-05-16 23:19:16'),
+(5, 'Youtube', '../../img/home/projects-9.png', 'Tailwind CSS / React JS', 1, '14/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-4-modal-1.png', '../../img/home/project-4-modal-2.png', '../../img/home/project-4-modal-3.png', '../../img/home/project-4-modal-4.png', '../../img/home/project-4-modal-5.png', '../../img/home/project-4-modal-6.png', '2024-05-14 07:48:13', '2024-05-16 23:19:19'),
 (6, 'Frontline Business Solutions', '../../img/home/project-5-modal-1.png', 'Tailwind CSS', 1, '14/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-5-modal-1.png', '../../img/home/project-5-modal-2.png', '../../img/home/project-5-modal-3.png', '../../img/home/project-5-modal-4.png', '../../img/home/project-5-modal-5.png', '../../img/home/project-5-modal-6.png', '2024-05-14 07:58:47', '2024-05-14 08:23:05'),
 (7, 'Inside Style', '../../img/home/project-6-modal-1.png', 'HTML / CSS', 1, '14/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-6-modal-1.png', '../../img/home/project-6-modal-2.png', '../../img/home/project-6-modal-3.png', '../../img/home/project-6-modal-4.png', '../../img/home/project-6-modal-5.png', '../../img/home/project-6-modal-6.png', '2024-05-14 08:06:00', '2024-05-14 08:23:08'),
 (8, 'Michi Ramen', '../../img/home/project-7-modal-1.png', 'SASS / HTML', 1, '14/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-7-modal-1.png', '../../img/home/project-7-modal-2.png', '../../img/home/project-7-modal-3.png', '../../img/home/project-7-modal-4.png', '../../img/home/project-7-modal-5.png', '../../img/home/project-7-modal-6.png', '2024-05-14 08:21:53', '2024-05-14 08:52:41'),
-(9, 'Gym Website', '../../img/home/project-8-modal-1.png', 'SASS / HTML', 1, '14/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-8-modal-1.png', '../../img/home/project-8-modal-2.png', '../../img/home/project-8-modal-3.png', '../../img/home/project-8-modal-4.png', '../../img/home/project-8-modal-5.png', '../../img/home/project-8-modal-6.png', '2024-05-14 08:29:42', '2024-05-14 08:29:42');
+(9, 'Gym Website', '../../img/home/project-8-modal-1.png', 'SASS / HTML', 1, '14/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-8-modal-1.png', '../../img/home/project-8-modal-2.png', '../../img/home/project-8-modal-3.png', '../../img/home/project-8-modal-4.png', '../../img/home/project-8-modal-5.png', '../../img/home/project-8-modal-6.png', '2024-05-14 08:29:42', '2024-05-14 08:29:42'),
+(11, 'McDonalds Website', '../../img/home/project-9.png', 'SASS / HTML / Javascript', 1, '5/16/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-9-modal-1.png', '../../img/home/project-9-modal-2.png', '../../img/home/project-9-modal-3.png', '../../img/home/project-9-modal-4.png', '../../img/home/project-9-modal-5.png', '../../img/home/project-9-modal-6.png', '2024-05-16 23:06:45', '2024-05-16 23:19:00'),
+(12, 'Graphic Designer Portfolio Website', '../../img/home/project-10.png', 'SASS / HTML / Javascript', 1, '5/16/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-10-modal-1.png', '../../img/home/project-10-modal-2.png', '../../img/home/project-10-modal-3.png', '../../img/home/project-10-modal-4.png', '../../img/home/project-10-modal-5.png', '../../img/home/project-10.png', '2024-05-16 23:08:58', '2024-05-16 23:19:09'),
+(13, 'Car Website', '../../img/home/project-11.png', 'SASS / HTML / Javascript', 1, '5/16/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-11-modal-1.png', '../../img/home/project-11-modal-2.png', '../../img/home/project-11-modal-3.png', '../../img/home/project-11.png', '../../img/home/project-11-modal-3.png', '../../img/home/project-11-modal-2.png', '2024-05-16 23:11:20', '2024-05-16 23:19:28'),
+(14, 'Blog Website', '../../img/home/project-12.png', 'SASS / HTML / Javascript', 1, '5/16/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-12-modal-1.png', '../../img/home/project-12-modal-2.png', '../../img/home/project-12-modal-3.png', '../../img/home/project-12-modal-4.png', '../../img/home/project-12-modal-5.png', '../../img/home/project-12-modal-6.png', '2024-05-16 23:13:45', '2024-05-16 23:19:32'),
+(15, 'Insight Website', '../../img/home/project-13.png', 'Wordpress / Tailwind CSS', 1, '5/16/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-13-modal-1.png', '../../img/home/project-13-modal-2.png', '../../img/home/project-13-modal-3.png', '../../img/home/project-13-modal-3.png', '../../img/home/project-13-modal-2.png', '../../img/home/project-13-modal-1.png', '2024-05-16 23:15:14', '2024-05-16 23:19:45'),
+(16, 'The Recipe Website', '../../img/home/project-17.png', 'HTML / CSS / Javascript', 1, '5/16/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-17-modal-1.png', '../../img/home/project-17-modal-2.png', '../../img/home/project-17-modal-3.png', '../../img/home/project-17-modal-4.png', '../../img/home/project-17-modal-5.png', '../../img/home/project-17-modal-6.png', '2024-05-16 23:17:40', '2024-05-16 23:19:38');
 
 -- --------------------------------------------------------
 
@@ -482,7 +482,7 @@ ALTER TABLE `certificate`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `contact_aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `contact_aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `cta`
@@ -512,7 +512,7 @@ ALTER TABLE `honor`
 -- AUTO_INCREMENT for table `project`
 --
 ALTER TABLE `project`
-  MODIFY `project_aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `project_aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `service`
