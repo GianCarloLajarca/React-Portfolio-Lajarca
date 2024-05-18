@@ -64,9 +64,9 @@ const Contact = () => {
                     Feel free to reach out to me using the contact form below or through the provided contact details. I'm always eager to hear from you and assist in any way I can.</p>
                
                 <ul className='contact-details flex flex-col gap-5'>
-                    <li className='flex flex-row gap-5'><FaPhoneAlt className='text-accent text-2xl'/><span className='text-white'>+63 928 688 9888</span></li>
-                    <li className='flex flex-row gap-5'><MdEmail className='text-accent text-2xl'/><span className='text-white'>gianlajarca14@gmail.com</span></li>
-                    <li className='flex flex-row gap-5'><FaLocationDot className='text-accent text-2xl'/><span className='text-white'>Brgy. Anilao-Labac, Lipa City</span></li>
+                    <li className='flex flex-row gap-5'><FaPhoneAlt className='text-accent text-2xl'/><span className='text-content'>+63 928 688 9888</span></li>
+                    <li className='flex flex-row gap-5'><MdEmail className='text-accent text-2xl'/><span className='text-content'>gianlajarca14@gmail.com</span></li>
+                    <li className='flex flex-row gap-5'><FaLocationDot className='text-accent text-2xl'/><span className='text-content'>Brgy. Anilao-Labac, Lipa City</span></li>
                 </ul>
                 <ul className='contact-icon flex flex-row gap-5'>
                       <li><FaFacebook  className='text-2xl text-accent'/></li>

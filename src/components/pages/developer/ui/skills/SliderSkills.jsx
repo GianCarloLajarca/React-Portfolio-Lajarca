@@ -30,7 +30,7 @@ const SliderSkills = () => {
         <div className='slider-skills py-20'>
          <div className='slider-skills-title flex flex-col gap-4 mb-20 max-w-[45rem] mx-auto leading-8'>
                 <h2 className='text-accent text-4xl text-center'>Skills</h2>
-                <p className='text-md text-stone-300 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nam exercitationem at aspernatur eligendi labore corrupti.</p>
+                <p className='text-md text-center text-content'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nam exercitationem at aspernatur eligendi labore corrupti.</p>
         </div>
             <Slider {...settings} className='px-20 cursor-pointer'>
             {skill?.data.map((item, key) => (

@@ -32,7 +32,7 @@ const Resume = () => {
             <div className='container ml-48 '>
                 <div className='resume-title flex flex-col gap-4 mb-20'>
                                 <h2 className='text-accent text-4xl text-center'>Resume</h2>
-                                <p className='text-md text-stone-300 text-center leading-6 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />Dicta nam exercitationem at aspernatur eligendi labore corrupti.</p>
+                                <p className='text-md text-center leading-6 text-center text-content'>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />Dicta nam exercitationem at aspernatur eligendi labore corrupti.</p>
                     </div>
 
                         <div className='resume-content grid grid-cols-2 gap-44'>
@@ -62,7 +62,6 @@ const Resume = () => {
                                     </div>
                                 ))}  
                                 </div>
-                                
                             </div>
                             <div className='resume-experience'>
                             <h2 className='flex flex-row items-center gap-3 text-2xl justify-center'><FaBriefcase />Experience:</h2>

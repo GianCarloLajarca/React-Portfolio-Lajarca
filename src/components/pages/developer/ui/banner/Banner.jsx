@@ -55,7 +55,7 @@ const Banner = () => {
 
         <div className='banner-profilepic object-cover size-[550px] '>
             <div className='banner-img'>
-                <img src={`${devBaseImgUrl}/${item.banner_photo}`} alt="" className='absolute w-[700px] h-[800px] object-cover translate-y-[-0.5rem]'/>
+                <img src={`${devBaseImgUrl}/${item.banner_photo}`} alt="" className='absolute w-[700px] h-[800px] object-cover translate-y-[-0.2rem]'/>
             </div>
         </div>
       <div  className='banner-scroll rotate-90 absolute translate-y-[42rem] translate-x-[100rem] '>

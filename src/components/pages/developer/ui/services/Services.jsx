@@ -27,7 +27,7 @@ const Services = () => {
                     <div className='section-title text-center mb-[57px] '>
                         <span className='subtitle text-[16px] font-semibold text-[#d1d1d1] leading-[26px] block box-border text-center'>Service</span>
                         <h2 className='mb-[16px] text-[32px] leading-[38px] font-bold text-accent'>What I do</h2>
-                        <p className='text-[16px] text-[#d0d0d0] max-w-[720px] mx-[auto] my-[0] leading-[1.625] text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo orci odio, ut bus sed. Phasellus vitae ullamcorper
+                        <p className='text-[16px] text-[#d0d0d0] max-w-[720px] mx-[auto] my-[0] leading-[1.625] text-center text-content'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi commodo orci odio, ut bus sed. Phasellus vitae ullamcorper
                         purus. Curabitur vel vestibulum justo.</p>
 
                     </div>
@@ -40,7 +40,7 @@ const Services = () => {
                 
                 <div className='row flex flex-wrap mr-[15px] ml-[15px] box-border basis[49%]' key={key}>
                                 <div className='service-card relative w-full min-h-[1px] pr-[15px] pl-[15px] w-96 group'>
-                                        <div className='single-service-box border-[1px] border-[solid] border-[rgba(255,255,255,0.3)] 
+                                        <div className='single-service-box border-[1px] border-[solid] border-content 
                                         w-88 h-[22rem] px-[30px] py-[30px]
                                         [transition:all_0.3s_ease-in] relative z-0 group-hover:bg-accent group-hover:bg-opacity-70 hover:text-darkblue transition-all hover:bg-opacity-70 '>
                                             <div className="icon text-[52px] leading-[62px] text-[#fff] mb-[18px] box-border visible">
@@ -48,7 +48,7 @@ const Services = () => {
                                             </div>
 
                                             <div className="service-card-content flex flex-col gap-6 box-border visible  text-[16px] text-[#818181] font-[400] leading-[1.5]">
-                                                    <h4 className='text-[20px] font-semibold text-[#fff] leading-[1.2380952380952381] mb-[.5rem] mt-0 group-hover:text-darkblue'>{item.service_title}</h4>
+                                                    <h4 className='text-[20px] font-semibold text-[#fff] leading-[1.2380952380952381] mb-[.5rem] mt-0 group-hover:text-darkblue text-content'>{item.service_title}</h4>
                                                     <p className='group-hover:text-darkblue font-thick'>{item.service_description}</p>
                                                     <button className='uppercase tracking-wide flex items-center gap-2 text-accent group-hover:text-darkblue hover:transition-all'>{item.service_button}<FaArrowRight /></button>
                                             </div>

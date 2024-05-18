@@ -26,9 +26,9 @@ const About = () => {
               </div>
               <div className='aboutme-content flex flex-col gap-10'>
                 <h2 className='flex gap-2 items-center text-accent text-2xl tracking-wide uppercase'><MdOutlineHorizontalRule />{item.about_title}</h2>
-                <p className='text-justify'>{item.about_description}</p>
+                <p className='text-justify text-content'>{item.about_description}</p>
 
-                <p className='text-justify'>{item.about_detail}</p>
+                <p className='text-justify text-content'>{item.about_detail}</p>
 
                 <ul className='flex flex-col gap-3'>
                   <li className='flex gap-24'>Name: <span>{item.about_name}</span></li>

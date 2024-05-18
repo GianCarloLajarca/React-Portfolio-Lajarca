@@ -15,6 +15,7 @@ import Education from "./components/pages/developer/dashboard/education/Educatio
 import Cta from "./components/pages/developer/dashboard/cta/Cta"
 import Welcome from "./components/pages/developer/dashboard/welcome/Welcome"
 import Contact from "./components/pages/developer/dashboard/contact/Contact"
+import DarkMode from "./components/DarkMode/DarkMode"
 
 const App = () => {
   const queryClient = new QueryClient

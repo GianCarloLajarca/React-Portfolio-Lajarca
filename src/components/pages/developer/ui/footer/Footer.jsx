@@ -35,9 +35,9 @@ const Footer = () => {
         <div className="footer__contact footer-box py-5 flex flex-col items-center lg:px-5 lg:py-0  lg:!items-start lg:ml-4 ">
             <h2 className='mb-5 text-center text-sm mb-3 font-semibold lg:text-left'>CONTACT DETAILS</h2>
             <ul className='flex flex-col text-center lg:text-left gap-3'>
-            <li className='text-md flex items-center gap-5'><HiDevicePhoneMobile className='text-2xl'/> +63 928 688 9888</li>
-            <li className='text-md flex items-center gap-5'><MdEmail className='text-2xl'/>gianlajarca14@gmail.com</li>
-            <li className='text-md flex items-center gap-5'><FaHome className='text-2xl'/>Brgy. Anilao-Labac, Lipa City, Batangas</li>
+            <li className='text-sm flex items-center gap-5'><HiDevicePhoneMobile className='text-2xl'/> +63 928 688 9888</li>
+            <li className='text-sm flex items-center gap-5'><MdEmail className='text-2xl'/>gianlajarca14@gmail.com</li>
+            <li className='text-sm flex items-center gap-5'><FaHome className='text-2xl'/>Brgy. Anilao-Labac, Lipa City, Batangas</li>
             </ul>
         </div>
         </div>

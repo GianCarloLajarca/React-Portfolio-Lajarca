@@ -25,7 +25,7 @@
 
   
   :root {
-    --primary: 255 255 255;
+    /* --primary: 255 255 255;
     --secondary: 242 242 242;
     --accent: 53 206 255;
     --content: 0 0 0;
@@ -34,10 +34,8 @@
     --alert: 220 38 38;
     --disable: 127 127 127;
     --info: 67 130 208;
-    --warning: 177 130 47;
-  }
-  
-  .dark{
+    --warning: 177 130 47; */
+
     --primary: 25 29 40;
     --secondary: 22 22 22;
     --accent: 254 204 115;
@@ -48,7 +46,53 @@
     --disable: 127 127 127;
     --info: 68 130 208;
     --warning: 177 130 47;
+    
+
+    --body_background: white ;
+    --body_color: black;
+    --link_color: navy;
   }
+
+  [data-theme="dark"] {
+    --primary: gray;
+    --secondary: 242 242 242;
+    --accent: 254 204 115;
+    --content: 0 0 0;
+    --darkblue: 31, 31, 31;
+    --line: 212 212 212;
+    --alert: 220 38 38;
+    --disable: 127 127 127;
+    --info: 67 130 208;
+    --warning: 177 130 47;
+
+    --body_background: #282c34;
+    --body_color: gray;
+    --link_color: cyan;
+
+  }
+  
+  /* .dark{
+    --primary: 25 29 40;
+    --secondary: 22 22 22;
+    --accent: 254 204 115;
+    --content: 255 255 255;
+    --darkblue: 22 25 34;
+    --line: 14 14 14;
+    --alert: 220 38 38;
+    --disable: 127 127 127;
+    --info: 68 130 208;
+    --warning: 177 130 47;
+
+    --body_background: #282c34;
+    --body_color: white;
+    --link_color: cyan;
+  } */
+
+  /* :root {
+    --body_background: white ;
+    --body_color: black;
+    --link_color: navy;
+  } */
 
   label {
     @apply mb-[6px] block text-[#5A5A5A]

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 17, 2024 at 06:58 AM
+-- Generation Time: May 17, 2024 at 01:43 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -167,7 +167,7 @@ INSERT INTO `cta` (`cta_aid`, `cta_title`, `cta_subtitle`, `cta_is_active`, `cta
 
 CREATE TABLE `education` (
   `education_aid` int(11) NOT NULL,
-  `education_title` varchar(50) NOT NULL,
+  `education_title` varchar(300) NOT NULL,
   `education_photo` varchar(100) NOT NULL,
   `education_is_active` tinyint(1) NOT NULL,
   `education_publish_date` varchar(20) NOT NULL,
@@ -184,7 +184,7 @@ CREATE TABLE `education` (
 
 INSERT INTO `education` (`education_aid`, `education_title`, `education_photo`, `education_is_active`, `education_publish_date`, `education_description`, `education_school`, `education_date`, `education_created`, `education_datetime`) VALUES
 (1, 'Bachelor of Science in Information Technology', 'dlsl-education.png', 1, '14/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto non asperiores facere eveniet itaque porro aperiam quae harum.', 'De La Salle Lipa', '2020 - Present', '2024-05-14 14:10:17', '2024-05-14 14:10:17'),
-(2, 'Accountancy, Business, and Management - Senior Hig', 'dlsl-education.png', 1, '14/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto non asperiores facere eveniet itaque porro aperiam quae harum.', 'De La Salle Lipa', '2018 - 2020', '2024-05-14 14:11:03', '2024-05-14 14:11:03');
+(2, 'Accountancy, Business, and Management - Senior High', 'dlsl-education.png', 1, '14/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto non asperiores facere eveniet itaque porro aperiam quae harum.', 'De La Salle Lipa', '2018 - 2020', '2024-05-14 14:11:03', '2024-05-17 18:13:10');
 
 -- --------------------------------------------------------
 
@@ -279,7 +279,7 @@ INSERT INTO `project` (`project_aid`, `project_title`, `project_thumbnail`, `pro
 (6, 'Frontline Business Solutions', '../../img/home/project-5-modal-1.png', 'Tailwind CSS', 1, '14/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-5-modal-1.png', '../../img/home/project-5-modal-2.png', '../../img/home/project-5-modal-3.png', '../../img/home/project-5-modal-4.png', '../../img/home/project-5-modal-5.png', '../../img/home/project-5-modal-6.png', '2024-05-14 07:58:47', '2024-05-14 08:23:05'),
 (7, 'Inside Style', '../../img/home/project-6-modal-1.png', 'HTML / CSS', 1, '14/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-6-modal-1.png', '../../img/home/project-6-modal-2.png', '../../img/home/project-6-modal-3.png', '../../img/home/project-6-modal-4.png', '../../img/home/project-6-modal-5.png', '../../img/home/project-6-modal-6.png', '2024-05-14 08:06:00', '2024-05-14 08:23:08'),
 (8, 'Michi Ramen', '../../img/home/project-7-modal-1.png', 'SASS / HTML', 1, '14/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-7-modal-1.png', '../../img/home/project-7-modal-2.png', '../../img/home/project-7-modal-3.png', '../../img/home/project-7-modal-4.png', '../../img/home/project-7-modal-5.png', '../../img/home/project-7-modal-6.png', '2024-05-14 08:21:53', '2024-05-14 08:52:41'),
-(9, 'Gym Website', '../../img/home/project-8-modal-1.png', 'SASS / HTML', 1, '14/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-8-modal-1.png', '../../img/home/project-8-modal-2.png', '../../img/home/project-8-modal-3.png', '../../img/home/project-8-modal-4.png', '../../img/home/project-8-modal-5.png', '../../img/home/project-8-modal-6.png', '2024-05-14 08:29:42', '2024-05-14 08:29:42'),
+(9, 'Gym Website', '../../img/home/project-8.png', 'SASS / HTML', 1, '14/05/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-8-modal-1.png', '../../img/home/project-8-modal-2.png', '../../img/home/project-8-modal-3.png', '../../img/home/project-8-modal-4.png', '../../img/home/project-8-modal-5.png', '../../img/home/project-8-modal-6.png', '2024-05-14 08:29:42', '2024-05-17 15:28:37'),
 (11, 'McDonalds Website', '../../img/home/project-9.png', 'SASS / HTML / Javascript', 1, '5/16/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-9-modal-1.png', '../../img/home/project-9-modal-2.png', '../../img/home/project-9-modal-3.png', '../../img/home/project-9-modal-4.png', '../../img/home/project-9-modal-5.png', '../../img/home/project-9-modal-6.png', '2024-05-16 23:06:45', '2024-05-16 23:19:00'),
 (12, 'Graphic Designer Portfolio Website', '../../img/home/project-10.png', 'SASS / HTML / Javascript', 1, '5/16/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-10-modal-1.png', '../../img/home/project-10-modal-2.png', '../../img/home/project-10-modal-3.png', '../../img/home/project-10-modal-4.png', '../../img/home/project-10-modal-5.png', '../../img/home/project-10.png', '2024-05-16 23:08:58', '2024-05-16 23:19:09'),
 (13, 'Car Website', '../../img/home/project-11.png', 'SASS / HTML / Javascript', 1, '5/16/2024', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, veniam ex? Repellendus minus omnis laudantium iste? Natus, quae ab soluta doloremque earum aliquam eaque non obcaecati, a odit, eum alias!', 'View Project Interface', '../../img/home/project-11-modal-1.png', '../../img/home/project-11-modal-2.png', '../../img/home/project-11-modal-3.png', '../../img/home/project-11.png', '../../img/home/project-11-modal-3.png', '../../img/home/project-11-modal-2.png', '2024-05-16 23:11:20', '2024-05-16 23:19:28'),
@@ -295,22 +295,24 @@ INSERT INTO `project` (`project_aid`, `project_title`, `project_thumbnail`, `pro
 
 CREATE TABLE `service` (
   `service_aid` int(11) NOT NULL,
-  `service_title` varchar(50) NOT NULL,
-  `service_photo` varchar(100) NOT NULL,
+  `service_title` varchar(100) NOT NULL,
+  `service_photo` varchar(400) NOT NULL,
+  `service_description` text NOT NULL,
+  `service_button` varchar(500) NOT NULL,
   `service_is_active` tinyint(1) NOT NULL,
-  `service_publish_date` varchar(20) NOT NULL,
+  `service_publish_date` varchar(50) NOT NULL,
   `service_datetime` varchar(20) NOT NULL,
-  `service_created` varchar(20) NOT NULL
+  `service_created` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `service`
 --
 
-INSERT INTO `service` (`service_aid`, `service_title`, `service_photo`, `service_is_active`, `service_publish_date`, `service_datetime`, `service_created`) VALUES
-(1, 'UI / UX', '../../img/home/service-1.png', 1, '5/12/2024', '2024-05-14 12:00:48', '2024-05-12 10:33:36'),
-(2, 'Web Development', '../../img/home/service-2.jpg', 1, '5/12/2024', '2024-05-14 12:00:51', '2024-05-12 10:42:13'),
-(3, 'Application Development', '../../img/home/service-3.png', 1, '5/12/2024', '2024-05-14 12:00:53', '2024-05-12 10:42:45');
+INSERT INTO `service` (`service_aid`, `service_title`, `service_photo`, `service_description`, `service_button`, `service_is_active`, `service_publish_date`, `service_datetime`, `service_created`) VALUES
+(10, 'UI / UX', 'service-1.png', 'Lorem Ipsum is simply text of the printing type.', 'Know More', 1, '5/17/2024', '2024-05-17 18:10:46', '2024-05-17 18:04:14'),
+(11, 'Frontend Web Development', 'service-2.png', 'Lorem Ipsum is simply text of the printing type.', 'Know More', 1, '5/17/2024', '2024-05-17 18:11:19', '2024-05-17 18:11:19'),
+(12, 'Application Development', 'service-3.png', 'Lorem Ipsum is simply text of the printing type.', 'Know More', 1, '5/17/2024', '2024-05-17 18:11:44', '2024-05-17 18:11:44');
 
 -- --------------------------------------------------------
 
@@ -518,7 +520,7 @@ ALTER TABLE `project`
 -- AUTO_INCREMENT for table `service`
 --
 ALTER TABLE `service`
-  MODIFY `service_aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `service_aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `skill`

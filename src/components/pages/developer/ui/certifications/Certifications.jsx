@@ -23,11 +23,11 @@ const Certifications = () => {
                 </div>
           </div>
             
-          <div className='tab flex justify-between items-center mt-8  mb-8 w-[30rem] max-w-[26rem] mx-auto'>
+          <div className='tab flex justify-between items-center mt-8  mb-8 w-[30rem] mx-auto'>
             <ul className='flex gap-12'>
-                  <li className='font-bold'><button className={`${certTab==="honors" ? "text-accent border-b border-accent" : "hover:text-accent transition-all"}`} onClick={() => handleChangeCert("honors")}>Honors</button></li>
-                  <li className='font-bold whitespace-nowrap'><button className={`${certTab==="topstudent" ? "text-accent border-b border-accent" : "hover:text-accent transition-all"}`} onClick={() => handleChangeCert("topstudent")}>Top Performing Student</button></li>
-                  <li className='font-bold'><button className={`${certTab==="certifications" ? "text-accent border-b border-accent" : "hover:text-accent transition-all"}`} onClick={() => handleChangeCert("certifications")}>Certifications</button></li>
+                  <li className='font-bold whitespace-nowrap text-lg'><button className={`${certTab==="honors" ? "text-accent border-b border-accent" : "hover:text-accent transition-all"}`} onClick={() => handleChangeCert("honors")}>Honors</button></li>
+                  <li className='font-bold whitespace-nowrap text-lg'><button className={`${certTab==="topstudent" ? "text-accent border-b border-accent" : "hover:text-accent transition-all"}`} onClick={() => handleChangeCert("topstudent")}>Top Performing Student</button></li>
+                  <li className='font-bold whitespace-nowrap text-lg'><button className={`${certTab==="certifications" ? "text-accent border-b border-accent" : "hover:text-accent transition-all"}`} onClick={() => handleChangeCert("certifications")}>Certifications</button></li>
             </ul>
 
           </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { baseImgUrl } from '../../../../helpers/functions-general'
+import DarkMode from '../../../../DarkMode/DarkMode'
 
 const Header = () => {
   return (
@@ -9,7 +10,7 @@ const Header = () => {
                 <img src={`${baseImgUrl}/home/logo.png`} alt="" />
             </div>
             <div className='header-nav text-stone-500'>
-                <ul className='flex gap-16'>
+                <ul className='flex gap-16 items-center'>
                     <li><a href="#banner" className='hover:text-accent transition-all'>Home</a></li>
                     <li><a href="#skills" className='hover:text-accent transition-all'>Skills</a></li>
                     <li><a href="#project" className='hover:text-accent transition-all'>Project</a></li>
@@ -17,7 +18,8 @@ const Header = () => {
                 </ul>
             </div>
             <div className='header-language'>
-                <ul className='flex gap-4 text-stone-500 font-bold'>
+                <ul className='flex gap-4 text-stone-500 font-bold items-center'>
+                    <li><DarkMode/></li>
                     <li className='hover:text-accent transition-all cursor-pointer'>FRA</li>
                     <li className='hover:text-accent transition-all cursor-pointer'>FER</li>
                     <li className='text-accent cursor-pointer'>ENG</li>
