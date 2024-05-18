@@ -14,6 +14,7 @@ export default {
         disable: 'rgb(var(--disable) / <alpha-value>)',
         info: 'rgb(var(--info) / <alpha-value>)',
         warning: 'rgb(var(--warning) / <alpha-value>)',
+        card: 'rgb(var(--card) / <alpha-value>)',
       },
 
       backgroundColor: {
@@ -26,6 +27,7 @@ export default {
         alert: 'rgb(var(--alert) / <alpha-value>)',
         disable: 'rgb(var(--disable) / <alpha-value>)',
         warning: 'rgb(var(--warning) / <alpha-value>)',
+        card: 'rgb(var(--card) / <alpha-value>)',
       },
 
       fill: {
@@ -38,6 +40,7 @@ export default {
         alert: 'rgb(var(--alert) / <alpha-value>)',
         disable: 'rgb(var(--disable) / <alpha-value>)',
         warning: 'rgb(var(--warning) / <alpha-value>)',
+        card: 'rgb(var(--card) / <alpha-value>)',
       },
 
       gridTemplateColumns: {

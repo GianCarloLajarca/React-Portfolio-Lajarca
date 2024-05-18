@@ -46,6 +46,7 @@
     --disable: 127 127 127;
     --info: 68 130 208;
     --warning: 177 130 47;
+    --card: 25 29 40;
     
 
     --body_background: white ;
@@ -54,11 +55,12 @@
   }
 
   [data-theme="dark"] {
-    --primary: gray;
+    --primary: 255, 255, 255;
     --secondary: 242 242 242;
     --accent: 254 204 115;
     --content: 0 0 0;
-    --darkblue: 31, 31, 31;
+    --darkblue: 132, 132, 132;
+    --card: 169, 169, 169;
     --line: 212 212 212;
     --alert: 220 38 38;
     --disable: 127 127 127;
@@ -66,7 +68,7 @@
     --warning: 177 130 47;
 
     --body_background: #282c34;
-    --body_color: gray;
+    --body_color: white;
     --link_color: cyan;
 
   }

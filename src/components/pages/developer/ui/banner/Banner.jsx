@@ -29,7 +29,7 @@ const Banner = () => {
 
   return (
     <>
-        <section id='banner' className='h-screen w-screen'>
+        <section id='banner' className='h-screen w-screen bg-primary'>
         <Header />
         {banner?.data.map((item, key) => (
     <div className='hero-banner grid grid-cols-2 gap-12 relative' key={key}>

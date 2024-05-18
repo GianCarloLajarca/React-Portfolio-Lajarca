@@ -41,7 +41,7 @@ const Resume = () => {
 
                                 <div className='mt-12 flex flex-col gap-5'>
                                 {education?.data.map((item, key) => (
-                                    <div className="resume-education-card bg-primary py-14 px-10" key={key}>
+                                    <div className="resume-education-card bg-card py-14 px-10" key={key}>
                                         <div className='resume-education-card-content flex flex-col gap-4'>
                                             <div className='resume-education-card-date'>
                                                 <h4>{item.education_date}</h4>
@@ -66,7 +66,7 @@ const Resume = () => {
                             <div className='resume-experience'>
                             <h2 className='flex flex-row items-center gap-3 text-2xl justify-center'><FaBriefcase />Experience:</h2>
                             {experience?.data.map((item, key) => (
-                                <div className="resume-experience-card mt-12 bg-primary py-14 px-10" key={key}>
+                                <div className="resume-experience-card mt-12 bg-card py-14 px-10" key={key}>
                                         <div className="resume-experience-card-content flex flex-col gap-4">
                                                 <div className='resume-experience-card-date'>
                                                     <h4>{item.experience_date}</h4>

@@ -1,6 +1,7 @@
 import React from "react";
 import "./DarkMode.css";
 import { MdDarkMode } from "react-icons/md";
+import { FaSun } from "react-icons/fa";
 
 const DarkMode = () => {
     const setDarkMode = () => {
@@ -23,7 +24,8 @@ const DarkMode = () => {
                 onChange={toggleTheme}
             />
             <label className='dark_mode_label' for='darkmode-toggle'>
-                <MdDarkMode />
+                <FaSun className="sun"/>
+                <MdDarkMode className="moon"/>
             </label>
         </div>
     );

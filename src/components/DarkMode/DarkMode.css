@@ -50,19 +50,19 @@
     top: 5px;
     z-index: 100;
 }
-.dark_mode_label svg.sun {
-    left: 5px;
-    fill: #fff;
-    transition: 0.3s;
-}
-.dark_mode_label svg.moon {
+.dark_mode_label .sun {
     left: 40px;
     fill: #7e7e7e;
     transition: 0.3s;
 }
-.dark_mode_input:checked + .dark_mode_label svg.sun {
+.dark_mode_label .moon {
+    left: 5px;
+    fill: #fff;
+    transition: 0.3s;
+}
+.dark_mode_input:checked + .dark_mode_label .sun {
     fill: #7e7e7e;
 }
-.dark_mode_input:checked + .dark_mode_label svg.moon {
+.dark_mode_input:checked + .dark_mode_label .moon {
     fill: #fff;
 }
