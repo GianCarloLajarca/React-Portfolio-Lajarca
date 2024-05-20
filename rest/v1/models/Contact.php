@@ -130,12 +130,12 @@ Class Contact {
             $sql = "select ";
             $sql .= "* ";
             $sql .= "from {$this->tblContact} ";
-            $sql .= "where contact_title like :contact_title ";
+            $sql .= "where contact_name like :contact_name ";
             $sql .= "order by contact_is_active desc, ";
-            $sql .= "contact_title_1 asc ";
+            $sql .= "contact_name_1 asc ";
             $query = $this->connection->prepare($sql);
             $query->execute([
-                "contact_title_1" => "%{$this->contact_search}%",
+                "contact_name_1" => "%{$this->contact_search}%",
             ]);
         } catch (PDOException $ex) {
             $query = false;
