@@ -15,12 +15,12 @@ const Footer = () => {
             <img src={`${baseImgUrl}/home/logo.png`} alt="" className=' object-contain size-24'/>
             <p className='text-xs mb-5'>Copyright © 2024</p>
             <ul className='flex gap-[2rem]'>
-                <li><FaFacebook className='text-accent cursor-pointer text-2xl'/></li>
-                <li><FaLinkedin className='text-accent cursor-pointer text-2xl'/></li>
-                <li><FaGithub className='text-accent cursor-pointer text-2xl'/></li>
-                <li><FaInstagram className='text-accent cursor-pointer text-2xl'/></li>
-                <li><FaTwitter className='text-accent cursor-pointer text-2xl'/></li>
-                <li><MdEmail className='text-accent cursor-pointer text-2xl'/></li>
+                <li><Link target="_blank" to="https://www.facebook.com/gianlajarca"><FaFacebook  className='text-2xl text-white cursor-pointer hover:text-accent transition-all'/></Link></li>
+                <li><Link target="_blank" to="https://www.linkedin.com/in/gian-carlo-lajarca-572402274/"><FaLinkedin className='text-2xl text-white cursor-pointer hover:text-accent transition-all'/></Link></li>
+                <li><Link target="_blank" to="https://github.com/GianCarloLajarca"><FaGithub className='text-2xl text-white cursor-pointer hover:text-accent transition-all'/></Link></li>
+                <li><Link target="_blank" to="https://www.instagram.com/gianlajarca_/"><FaInstagram  className='text-2xl text-white cursor-pointer hover:text-accent transition-all'/></Link></li>
+                <li><Link target="_blank" to="https://x.com/gianlajarca_"><FaTwitter  className='text-2xl text-white cursor-pointer hover:text-accent transition-all'/></Link></li>
+                <li><Link target="_blank" to="https://mail.google.com"><MdEmail  className='text-2xl text-white cursor-pointer hover:text-accent transition-all'/></Link></li>
 
             </ul>
         </div>

@@ -14,9 +14,10 @@ import { SiAboutdotme } from 'react-icons/si'
 import { IoIosBriefcase } from 'react-icons/io'
 import { GiGraduateCap, GiSkills, GiVerticalBanner } from 'react-icons/gi'
 import { IoPersonSharp } from 'react-icons/io5'
-import { FaCertificate } from 'react-icons/fa'
+import { FaCertificate, FaUserCircle } from 'react-icons/fa'
 import { GrProjects } from 'react-icons/gr'
 import { MdContactPage, MdDashboard, MdOutlineCallToAction } from 'react-icons/md'
+import Searchbar from '../../../../partials/Searchbar'
 
 const Top = () => {
 
@@ -49,6 +50,7 @@ const Top = () => {
        <aside className='px-4 py-6 w-[250px] text-primary h-screen border-r border-line'>
             <Navigation/>
         <ul className='nav'>
+            <li className='nav-link'><Link to="/users"><FaUserCircle />Users</Link></li>
             <li className='nav-link'><Link to="/dashboard"><MdDashboard />Dashboard</Link></li>
             <li className='nav-link'><Link to="/banner"><GiVerticalBanner />Banner</Link></li>
             <li className='nav-link'><Link to="/about"><SiAboutdotme/>About</Link></li>
@@ -71,7 +73,7 @@ const Top = () => {
                 <div className={`main-wrapper px-4 transition-all py-3 sticky top-0 w-full`}>
                 <div className='flex justify-between items-center'>
                     <h1>Top Performing Student Database</h1>
-                    {/* <Searchbar setIsSeach={setIsSeach} setKeyword={setKeyword}/> */}
+                    <Searchbar setIsSearch={setIsSearch} setKeyword={setKeyword}/>
                     
                 </div>
 

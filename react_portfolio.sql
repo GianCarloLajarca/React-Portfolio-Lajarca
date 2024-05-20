@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 17, 2024 at 01:43 PM
+-- Generation Time: May 20, 2024 at 02:57 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -89,7 +89,7 @@ INSERT INTO `banner` (`banner_aid`, `banner_greet`, `banner_photo`, `banner_firs
 
 CREATE TABLE `certificate` (
   `certificate_aid` int(11) NOT NULL,
-  `certificate_title` varchar(50) NOT NULL,
+  `certificate_title` varchar(500) NOT NULL,
   `certificate_photo` varchar(100) NOT NULL,
   `certificate_is_active` tinyint(1) NOT NULL,
   `certificate_publish_date` varchar(20) NOT NULL,
@@ -220,12 +220,12 @@ INSERT INTO `experience` (`experience_aid`, `experience_title`, `experience_phot
 
 CREATE TABLE `honor` (
   `honor_aid` int(11) NOT NULL,
-  `honor_title` varchar(50) NOT NULL,
+  `honor_title` varchar(500) NOT NULL,
   `honor_photo` varchar(100) NOT NULL,
   `honor_is_active` tinyint(1) NOT NULL,
   `honor_publish_date` varchar(20) NOT NULL,
-  `honor_date` varchar(50) NOT NULL,
-  `honor_giver` varchar(50) NOT NULL,
+  `honor_date` varchar(100) NOT NULL,
+  `honor_giver` varchar(100) NOT NULL,
   `honor_created` varchar(20) NOT NULL,
   `honor_datetime` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -235,11 +235,11 @@ CREATE TABLE `honor` (
 --
 
 INSERT INTO `honor` (`honor_aid`, `honor_title`, `honor_photo`, `honor_is_active`, `honor_publish_date`, `honor_date`, `honor_giver`, `honor_created`, `honor_datetime`) VALUES
-(1, 'Third Honor Awardee - Second Semester of A.Y. 2022', '../../img/home/honor-1.jpg', 1, '5/13/2024', 'November 2023', 'De La Salle Lipa', '2024-05-13 20:55:14', '2024-05-15 09:40:00'),
-(2, 'Second Honor Awardee - First Semester of A.Y. 2022', '../../img/home/honor-2.jpg', 1, '5/13/2024', 'April 2021', 'De La Salle Lipa', '2024-05-13 20:57:20', '2024-05-13 21:12:30'),
-(3, 'First Honor Awardee - Second Semester of A.Y. 2021', '../../img/home/honor-3.png', 1, '5/13/2024', 'December 2021', 'De La Salle Lipa', '2024-05-13 20:58:19', '2024-05-13 20:58:19'),
-(4, 'First Honor Awardee - First Semester of A.Y. 2021-', '../../img/home/honor-4.png', 1, '5/13/2024', 'May 2022', 'De La Salle Lipa', '2024-05-13 20:59:26', '2024-05-13 20:59:26'),
-(5, 'First Honor Awardee - Second Semester of A.Y. 2020', '../../img/home/honor-5.png', 1, '5/13/2024', 'November 2021', 'De La Salle Lipa', '2024-05-13 21:00:07', '2024-05-13 21:00:07'),
+(1, 'Third Honor Awardee - Second Semester of A.Y. 2022-2023', '../../img/home/honor-1.jpg', 1, '5/13/2024', 'November 2023', 'De La Salle Lipa', '2024-05-13 20:55:14', '2024-05-20 20:47:15'),
+(2, 'Second Honor Awardee - First Semester of A.Y. 2022-2023', '../../img/home/honor-2.jpg', 1, '5/13/2024', 'April 2021', 'De La Salle Lipa', '2024-05-13 20:57:20', '2024-05-20 20:46:59'),
+(3, 'First Honor Awardee - Second Semester of A.Y. 2021 - 2022', '../../img/home/honor-3.png', 1, '5/13/2024', 'December 2021', 'De La Salle Lipa', '2024-05-13 20:58:19', '2024-05-20 20:46:49'),
+(4, 'First Honor Awardee - First Semester of A.Y. 2021-2022', 'honor-4.jpg', 1, '5/13/2024', 'May 2022', 'De La Salle Lipa', '2024-05-13 20:59:26', '2024-05-20 20:46:34'),
+(5, 'First Honor Awardee - Second Semester of A.Y. 2020 - 2021', 'honor-5.jpg', 1, '5/13/2024', 'November 2021', 'De La Salle Lipa', '2024-05-13 21:00:07', '2024-05-20 20:46:18'),
 (6, 'Dean’s List - Third Honor for the 1st Semester A.Y', '../../img/home/honor-6.jpg', 1, '5/13/2024', 'May 2022', 'De La Salle Lipa', '2024-05-13 21:01:01', '2024-05-13 21:01:01');
 
 -- --------------------------------------------------------
@@ -382,6 +382,30 @@ INSERT INTO `top` (`top_aid`, `top_title`, `top_photo`, `top_is_active`, `top_pu
 (3, 'Top Student in Fundamentals of Database Systems', '../../img/home/topperforming-3.png', 1, '5/13/2024', 'June 2023', 'De La Salle Lipa Junior Philippine Computer Society', '2024-05-13 21:39:32', '2024-05-13 22:23:36'),
 (4, 'Top Student in Applications Development and Emergi', '../../img/home/topperforming-4.png', 1, '5/13/2024', 'June 2023', 'De La Salle Lipa Junior Philippine Computer Society', '2024-05-13 21:40:31', '2024-05-13 22:23:40');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `user_aid` int(11) NOT NULL,
+  `user_is_active` tinyint(1) NOT NULL,
+  `user_name` varchar(100) NOT NULL,
+  `user_email` varchar(50) NOT NULL,
+  `user_key` varchar(255) NOT NULL,
+  `user_password` varchar(255) NOT NULL,
+  `user_created` varchar(20) NOT NULL,
+  `user_datetime` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`user_aid`, `user_is_active`, `user_name`, `user_email`, `user_key`, `user_password`, `user_created`, `user_datetime`) VALUES
+(1, 1, 'Gian Carlo Lajarca', 'gianlajarca14@gmail.com', '', '$2y$10$yctlendOeUr3ata.2lDJnO/.6otCMibWuic11gP7UAIuh8.S.GgIC', '2024-05-20 20:34:55', '2024-05-20 20:37:03');
+
 --
 -- Indexes for dumped tables
 --
@@ -459,6 +483,12 @@ ALTER TABLE `top`
   ADD PRIMARY KEY (`top_aid`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`user_aid`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -484,7 +514,7 @@ ALTER TABLE `certificate`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `contact_aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `contact_aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `cta`
@@ -533,6 +563,12 @@ ALTER TABLE `skill`
 --
 ALTER TABLE `top`
   MODIFY `top_aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `user_aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

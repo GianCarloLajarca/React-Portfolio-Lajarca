@@ -4,8 +4,17 @@ import Header from '../header/Header';
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { baseImgUrl, devBaseImgUrl } from '../../../../helpers/functions-general';
 import useQueryData from '../../../../custom-hook/useQueryData';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
+  const socials = [
+      <FaFacebook />,
+      <FaLinkedin />,
+      <FaGithub />,
+      <FaInstagram />,
+      <FaTwitter />,
+      <MdEmail />,
+  ];
 
   const {
     isLoading,
@@ -43,12 +52,14 @@ const Banner = () => {
              flex gap-2 items-center justify-center' onClick={handleDownloadResume}>{item.banner_button} <span className='text-xl'><MdDownload /></span></button>
              <div className='hero-banner-icons flex items-end'>
               <ul className='flex flex-row gap-6 text-2xl mt-36'>
-                <li className='cursor-pointer hover:text-accent transition-all'><FaFacebook /></li>
-                <li className='cursor-pointer hover:text-accent transition-all'><FaLinkedin /></li>
-                <li className='cursor-pointer hover:text-accent transition-all'><FaGithub /></li>
-                <li className='cursor-pointer hover:text-accent transition-all'><FaInstagram /></li>
-                <li className='cursor-pointer hover:text-accent transition-all'><FaTwitter /></li>
-                <li className='cursor-pointer hover:text-accent transition-all'><MdEmail /></li>
+              
+                <li><Link target="_blank" to="https://www.facebook.com/gianlajarca"><FaFacebook className='cursor-pointer hover:text-accent transition-all'/></Link></li>
+                <li><Link target="_blank" to="https://www.linkedin.com/in/gian-carlo-lajarca-572402274/"><FaLinkedin className='cursor-pointer hover:text-accent transition-all'/></Link></li>
+                <li><Link target="_blank" to="https://github.com/GianCarloLajarca"><FaGithub className='cursor-pointer hover:text-accent transition-all'/></Link></li>
+                <li><Link target="_blank" to="https://www.instagram.com/gianlajarca_/"><FaInstagram className='cursor-pointer hover:text-accent transition-all'/></Link></li>
+                <li><Link target="_blank" to="https://x.com/gianlajarca_"><FaTwitter className='cursor-pointer hover:text-accent transition-all'/></Link></li>
+                <li><Link target="_blank" to="https://mail.google.com"><MdEmail className='cursor-pointer hover:text-accent transition-all'/></Link></li>
+              
               </ul>
             </div>
         </div>

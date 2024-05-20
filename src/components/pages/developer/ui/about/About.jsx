@@ -2,6 +2,7 @@ import React from 'react'
 import { baseImgUrl, devBaseImgUrl } from '../../../../helpers/functions-general'
 import { MdOutlineHorizontalRule } from 'react-icons/md'
 import useQueryData from '../../../../custom-hook/useQueryData';
+import { Link } from 'react-router-dom';
 
 const About = () => {
 
@@ -40,7 +41,7 @@ const About = () => {
                 </ul>
 
                 <div className='aboutme-btn flex flex-row gap-12'>
-                    <button className='uppercase bg-accent py-2 px-10 text-primary font-semibold  border border-accent hover:bg-transparent hover:text-white hover:border hover:border-light transition-all'>Hire me</button>
+                <button className='uppercase bg-accent py-2 px-10 text-primary font-semibold  border border-accent hover:bg-transparent hover:text-white hover:border hover:border-light transition-all'>Hire me</button>
                     <a href={`${baseImgUrl}/home/resume-1.png`} data-lightbox="image-1" data-title="Resume" className='py-4 px-10 uppercase bg-accent text-primary font-thick w-48 text-center 
              border border-accent hover:bg-transparent hover:text-white hover:border hover:border-light transition-all'>View Resume</a>
                 </div>

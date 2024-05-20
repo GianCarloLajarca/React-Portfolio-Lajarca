@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaCertificate } from 'react-icons/fa'
+import { FaCertificate, FaUserCircle } from 'react-icons/fa'
 import { FiPlus } from 'react-icons/fi'
 import { GiGraduateCap, GiSkills, GiVerticalBanner } from 'react-icons/gi'
 import { GrProjects } from 'react-icons/gr'
@@ -17,6 +17,7 @@ import ModalError from '../../../../partials/modals/ModalError'
 import ModalAddBanner from './ModalAddBanner'
 import BannerTable from './BannerTable'
 import { MdContactPage, MdDashboard, MdOutlineCallToAction } from 'react-icons/md'
+import Searchbar from '../../../../partials/Searchbar'
 
 const Banner = () => {
 
@@ -49,6 +50,7 @@ const Banner = () => {
          <aside className='px-4 py-6 w-[250px] text-primary h-screen border-r border-line'>
             <Navigation/>
         <ul className='nav'>
+            <li className='nav-link'><Link to="/users"><FaUserCircle />Users</Link></li>
             <li className='nav-link'><Link to="/dashboard"><MdDashboard />Dashboard</Link></li>
             <li className='nav-link active'><Link to="/banner"><GiVerticalBanner />Banner</Link></li>
             <li className='nav-link'><Link to="/about"><SiAboutdotme/>About</Link></li>
@@ -71,7 +73,7 @@ const Banner = () => {
                 <div className={`main-wrapper px-4 transition-all py-3 sticky top-0 w-full`}>
                 <div className='flex justify-between items-center'>
                     <h1>Banner Database</h1>
-                    {/* <Searchbar setIsSeach={setIsSeach} setKeyword={setKeyword}/> */}
+                    <Searchbar setIsSearch={setIsSearch} setKeyword={setKeyword}/>
                     
                 </div>
 

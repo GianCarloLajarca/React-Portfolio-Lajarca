@@ -9,7 +9,7 @@ import { setIsAdd } from '../../../../../store/StoreAction'
 import { StoreContext } from '../../../../../store/StoreContext'
 import ModalError from '../../../../partials/modals/ModalError'
 import Toast from '../../../../partials/Toast'
-import { FaCertificate } from 'react-icons/fa';
+import { FaCertificate, FaUserCircle } from 'react-icons/fa';
 import { GiGraduateCap, GiSkills, GiVerticalBanner } from 'react-icons/gi';
 import { GrProjects } from 'react-icons/gr';
 import { IoIosBriefcase } from 'react-icons/io';
@@ -17,6 +17,7 @@ import { IoPersonSharp } from 'react-icons/io5';
 import { SiAboutdotme } from 'react-icons/si';
 import { Link } from 'react-router-dom';
 import { MdContactPage, MdDashboard, MdOutlineCallToAction } from 'react-icons/md'
+import Searchbar from '../../../../partials/Searchbar'
 
 const Certificate = () => {
 
@@ -49,6 +50,7 @@ const Certificate = () => {
       <aside className='px-4 py-6 w-[250px] text-primary h-screen border-r border-line'>
             <Navigation/>
         <ul className='nav'>
+            <li className='nav-link'><Link to="/users"><FaUserCircle />Users</Link></li>
             <li className='nav-link'><Link to="/dashboard"><MdDashboard />Dashboard</Link></li>
             <li className='nav-link'><Link to="/banner"><GiVerticalBanner />Banner</Link></li>
             <li className='nav-link'><Link to="/about"><SiAboutdotme/>About</Link></li>
@@ -71,7 +73,7 @@ const Certificate = () => {
                 <div className={`main-wrapper px-4 transition-all py-3 sticky top-0 w-full`}>
                 <div className='flex justify-between items-center'>
                     <h1>Certifications Database</h1>
-                    {/* <Searchbar setIsSeach={setIsSeach} setKeyword={setKeyword}/> */}
+                    <Searchbar setIsSearch={setIsSearch} setKeyword={setKeyword}/>
                     
                 </div>
 

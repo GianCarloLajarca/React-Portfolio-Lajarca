@@ -22,3 +22,10 @@ export const devKey =
   
     return data;
   };
+
+  // get the url id parameter
+export const getUrlParam = () => {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  return urlParams;
+};

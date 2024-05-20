@@ -1,6 +1,6 @@
 import React from 'react'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
-import { FaFacebook, FaInstagram, FaLinkedin, FaPhoneAlt, FaTwitter } from 'react-icons/fa'
+import { FaFacebook, FaGithub, FaInstagram, FaLinkedin, FaPhoneAlt, FaTwitter } from 'react-icons/fa'
 import { FaLocationDot } from 'react-icons/fa6'
 import { MdEmail } from 'react-icons/md'
 import { queryData } from '../../../../helpers/queryData'
@@ -10,6 +10,7 @@ import { StoreContext } from '../../../../../store/StoreContext'
 import { Formik, Form, useFormik } from 'formik'
 import { InputText, InputTextArea } from '../../../../helpers/FormInputs'
 import SpinnerButton from '../../../../partials/spinners/SpinnerButton'
+import { Link } from 'react-router-dom'
 
 
 const Contact = () => {
@@ -69,10 +70,12 @@ const Contact = () => {
                     <li className='flex flex-row gap-5'><FaLocationDot className='text-accent text-2xl'/><span className='text-content'>Brgy. Anilao-Labac, Lipa City</span></li>
                 </ul>
                 <ul className='contact-icon flex flex-row gap-5'>
-                      <li><FaFacebook  className='text-2xl text-accent'/></li>
-                      <li><FaLinkedin className='text-2xl text-accent'/></li>
-                      <li><FaInstagram  className='text-2xl text-accent'/></li>
-                      <li><FaTwitter  className='text-2xl text-accent'/></li>
+                      <li><Link target="_blank" to="https://www.facebook.com/gianlajarca"><FaFacebook className='text-2xl text-white cursor-pointer hover:text-accent transition-all'/></Link></li>
+                      <li><Link target="_blank" to="https://www.linkedin.com/in/gian-carlo-lajarca-572402274/"><FaLinkedin className='text-2xl text-white cursor-pointer hover:text-accent transition-all'/></Link></li>
+                      <li><Link target="_blank" to="https://github.com/GianCarloLajarca"><FaGithub className='text-2xl text-white cursor-pointer hover:text-accent transition-all'/></Link></li>
+                      <li><Link target="_blank" to="https://www.instagram.com/gianlajarca_/"><FaInstagram className='text-2xl text-white cursor-pointer hover:text-accent transition-all'/></Link></li>
+                      <li><Link target="_blank" to="https://x.com/gianlajarca_"><FaTwitter className='text-2xl text-white cursor-pointer hover:text-accent transition-all'/></Link></li>
+                      <li><Link target="_blank" to="https://mail.google.com"><MdEmail className='text-2xl text-white cursor-pointer hover:text-accent transition-all'/></Link></li>
                 </ul>
               </div>
               <Formik

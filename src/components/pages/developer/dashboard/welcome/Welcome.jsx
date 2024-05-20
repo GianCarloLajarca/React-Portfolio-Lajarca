@@ -8,7 +8,7 @@ import { GiGraduateCap, GiSkills, GiVerticalBanner } from 'react-icons/gi'
 import { SiAboutdotme } from 'react-icons/si'
 import { IoIosBriefcase } from 'react-icons/io'
 import { IoPersonSharp } from 'react-icons/io5'
-import { FaCertificate } from 'react-icons/fa'
+import { FaCertificate, FaUserCircle } from 'react-icons/fa'
 import { GrProjects } from 'react-icons/gr'
 import Header from '../../../../partials/Header'
 
@@ -119,6 +119,7 @@ const Welcome = () => {
       <aside className='px-4 py-6 w-[250px] text-primary h-screen border-r border-line'>
             <Navigation/>
       <ul className='nav'>
+            <li className='nav-link'><Link to="/users"><FaUserCircle />Users</Link></li>
             <li className='nav-link active'><Link to="/dashboard"><MdDashboard />Dashboard</Link></li>
             <li className='nav-link'><Link to="/banner"><GiVerticalBanner />Banner</Link></li>
             <li className='nav-link'><Link to="/about"><SiAboutdotme/>About</Link></li>

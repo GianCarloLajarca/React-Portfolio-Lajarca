@@ -359,3 +359,19 @@ function getQueriedData($query)
 }
 
 
+// Reset password
+function checkResetPassword($object)
+{
+    $query = $object->resetPassword();
+    checkQuery($query, "There's a problem processing your request. (reset password)");
+    return $query;
+}
+
+// Set password
+function checkSetPassword($object)
+{
+    $query = $object->setPassword();
+    checkQuery($query, "There's a problem processing your request. (set password)");
+    return $query;
+}
+

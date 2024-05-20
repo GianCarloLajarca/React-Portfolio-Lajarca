@@ -12,6 +12,12 @@ dist
 dist-ssr
 *.local
 
+public/img
+
+rest/v1/jwt
+rest/v1/notification/PHPmailer
+rest/v1/notification/mail-config.php
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -22,5 +28,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-public

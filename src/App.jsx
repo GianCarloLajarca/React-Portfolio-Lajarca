@@ -16,6 +16,10 @@ import Cta from "./components/pages/developer/dashboard/cta/Cta"
 import Welcome from "./components/pages/developer/dashboard/welcome/Welcome"
 import Contact from "./components/pages/developer/dashboard/contact/Contact"
 import DarkMode from "./components/DarkMode/DarkMode"
+import Login from "./components/pages/developer/access/Login"
+import ForgotPassword from "./components/pages/developer/access/ForgotPassword"
+import CreatePassword from "./components/pages/developer/access/CreatePassword"
+import Users from "./components/pages/developer/dashboard/users/Users"
 
 const App = () => {
   const queryClient = new QueryClient
@@ -26,7 +30,6 @@ const App = () => {
           <Router>
                 <Routes>
                   <Route path="/dashboard" element={<Welcome/>}/>
-                  <Route path="/home" element={<Home/>}/>
                   <Route path="/skill" element={<Skill/>}/>
                   <Route path="/service" element={<Service/>}/>
                   <Route path="/about" element={<About/>}/>
@@ -39,6 +42,13 @@ const App = () => {
                   <Route path="/education" element={<Education/>}/>
                   <Route path="/cta" element={<Cta/>}/>
                   <Route path="/contact" element={<Contact/>}/>
+                  <Route path="/users" element={<Users/>}/>
+                  {/* UI */}
+                  <Route path="/home" element={<Home/>}/>
+
+                  <Route path="/login" element={<Login/>}/>
+                  <Route path="/forgot-password" element={<ForgotPassword/>}/>
+                  <Route path="/create-password" element={<CreatePassword/>}/>
                 </Routes>
           </Router>
         </StoreProvider>

@@ -237,7 +237,7 @@
     }
 
     .btn--accent {
-      @apply bg-accent text-white 
+      @apply bg-accent text-primary 
     }
 
     .btn--cancel {
