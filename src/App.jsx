@@ -20,6 +20,8 @@ import Login from "./components/pages/developer/access/Login"
 import ForgotPassword from "./components/pages/developer/access/ForgotPassword"
 import CreatePassword from "./components/pages/developer/access/CreatePassword"
 import Users from "./components/pages/developer/dashboard/users/Users"
+import PageNotFound from "./components/partials/PageNotFound"
+import ProtectedRoute from "./components/pages/developer/access/ProtectedRoute"
 
 const App = () => {
   const queryClient = new QueryClient
@@ -29,7 +31,15 @@ const App = () => {
         <StoreProvider>
           <Router>
                 <Routes>
-                  <Route path="/dashboard" element={<Welcome/>}/>
+                  <Route path="/*" element={<PageNotFound/>}/>
+
+                  <Route path="/dashboard" element={
+                    <ProtectedRoute>
+                       <Welcome/>
+                    </ProtectedRoute>
+                 
+                  }/>
+
                   <Route path="/skill" element={<Skill/>}/>
                   <Route path="/service" element={<Service/>}/>
                   <Route path="/about" element={<About/>}/>

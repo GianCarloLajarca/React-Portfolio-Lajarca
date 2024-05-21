@@ -119,8 +119,8 @@ const Welcome = () => {
       <aside className='px-4 py-6 w-[250px] text-primary h-screen border-r border-line'>
             <Navigation/>
       <ul className='nav'>
-            <li className='nav-link'><Link to="/users"><FaUserCircle />Users</Link></li>
             <li className='nav-link active'><Link to="/dashboard"><MdDashboard />Dashboard</Link></li>
+            <li className='nav-link'><Link to="/users"><FaUserCircle />Users</Link></li>
             <li className='nav-link'><Link to="/banner"><GiVerticalBanner />Banner</Link></li>
             <li className='nav-link'><Link to="/about"><SiAboutdotme/>About</Link></li>
             <li className='nav-link'><Link to="/service"><IoIosBriefcase/>Services</Link></li>
