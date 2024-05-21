@@ -7,8 +7,6 @@ const WelcomeTable = ({certificate, honor, project, skill, top}) => {
   return (
     <>
                             <div className='grid grid-cols-4 gap-4 place-content-center'>
-                                
-
                                 <div className='item-cards bg-darkblue p-12'>
                                     <h3>No. of Foundation Certificate Info</h3>
                                     <h4 className='text-3xl'>{certificate?.data.length}</h4>

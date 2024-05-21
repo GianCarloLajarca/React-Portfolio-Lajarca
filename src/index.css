@@ -55,7 +55,7 @@
   }
 
   [data-theme="dark"] {
-    --primary: 255, 255, 255;
+    --primary: 252, 251, 244;
     --secondary: 242 242 242;
     --accent: 254 204 115;
     --content: 0 0 0;
