@@ -4,6 +4,7 @@ import { LiaAngleDownSolid, LiaKeySolid, LiaSignOutAltSolid, LiaUserCircle } fro
 import { Link } from 'react-router-dom'
 import { StoreContext } from '../../store/StoreContext'
 import { checkLocalStorage } from '../helpers/functions-general'
+import DarkMode from '../DarkMode/DarkMode'
 
 const Header = () => {
     const [showDropDown, setShowDropDown] = React.useState(false);
@@ -39,6 +40,7 @@ const Header = () => {
   return (
     <header className='header px-4 py-3 border-b border-line'>
         <div className='flex justify-end items-center gap-4 w-full relative'>
+            <DarkMode/>
             <button className='text-3xl' onClick={() => handleChangeColorTheme('dark')}><CiBellOn/></button>
             <img src="https://via.placeholder.com/40x40" alt="" className='size-[40px] rounded-full object-cover'/>
             <div>
