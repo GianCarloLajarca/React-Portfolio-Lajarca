@@ -11,6 +11,7 @@ import { IoPersonSharp } from 'react-icons/io5'
 import { FaCertificate, FaUserCircle } from 'react-icons/fa'
 import { GrProjects } from 'react-icons/gr'
 import Header from '../../../../partials/Header'
+import { StoreContext } from '../../../../../store/StoreContext'
 
 const Welcome = () => {
 
@@ -111,6 +112,10 @@ const Welcome = () => {
         "top", // key
       );
 
+      const {store} = React.useContext(StoreContext)
+      const name = store.credentials?.data.user_name
+      const email = store.credentials?.data.user_email
+
 
   return (
     <>
@@ -141,7 +146,7 @@ const Welcome = () => {
         <div className='flex relative'>
             <div className={`main-wrapper transition-all px-4 py-3 max-h-[calc(100vh - 65px)] w-full `}>
                 <div className='flex justify-between items-center'>
-                    <h1>Welcome User</h1>
+                    <h1>Welcome {name}</h1>
                     {/* <Searchbar setIsSeach={setIsSeach} setKeyword={setKeyword}/> */}
                 </div>
             
