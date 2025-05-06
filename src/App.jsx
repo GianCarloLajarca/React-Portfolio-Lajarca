@@ -54,7 +54,7 @@ const App = () => {
                   <Route path="/contact" element={<Contact/>}/>
                   <Route path="/users" element={<Users/>}/>
                   {/* UI */}
-                  <Route path="/home" element={<Home/>}/>
+                  <Route path="/React-Portfolio-Lajarca/" element={<Home />} />
 
                   <Route path="/login" element={<Login/>}/>
                   <Route path="/forgot-password" element={<ForgotPassword/>}/>
