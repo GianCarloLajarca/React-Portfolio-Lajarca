@@ -50,7 +50,7 @@ const Services = () => {
                                             <div className="service-card-content flex flex-col gap-6 box-border visible  text-[16px] text-[#818181] font-[400] leading-[1.5]">
                                                     <h4 className='text-[20px] font-semibold text-[#fff] leading-[1.2380952380952381] mb-[.5rem] mt-0 group-hover:text-darkblue text-content'>{item.service_title}</h4>
                                                     <p className='group-hover:text-darkblue font-thick'>{item.service_description}</p>
-                                                    <button className='uppercase tracking-wide flex items-center gap-2 text-accent group-hover:text-darkblue hover:transition-all'>{item.service_button}<FaArrowRight /></button>
+                                                    {/* <button className='uppercase tracking-wide flex items-center gap-2 text-accent group-hover:text-darkblue hover:transition-all'>{item.service_button}<FaArrowRight /></button> */}
                                             </div>
                                         </div>
                                 </div>

@@ -11,6 +11,7 @@ import { IoPersonSharp } from 'react-icons/io5'
 import { FaCertificate, FaUserCircle } from 'react-icons/fa'
 import { GrProjects } from 'react-icons/gr'
 import Header from '../../../../partials/Header'
+import { StoreContext } from '../../../../../store/StoreContext'
 
 const Welcome = () => {
 
@@ -111,6 +112,10 @@ const Welcome = () => {
         "top", // key
       );
 
+      const {store} = React.useContext(StoreContext)
+      const name = store.credentials?.data.user_name
+      const email = store.credentials?.data.user_email
+
 
   return (
     <>
@@ -119,8 +124,8 @@ const Welcome = () => {
       <aside className='px-4 py-6 w-[250px] text-primary h-screen border-r border-line'>
             <Navigation/>
       <ul className='nav'>
-            <li className='nav-link'><Link to="/users"><FaUserCircle />Users</Link></li>
             <li className='nav-link active'><Link to="/dashboard"><MdDashboard />Dashboard</Link></li>
+            <li className='nav-link'><Link to="/users"><FaUserCircle />Users</Link></li>
             <li className='nav-link'><Link to="/banner"><GiVerticalBanner />Banner</Link></li>
             <li className='nav-link'><Link to="/about"><SiAboutdotme/>About</Link></li>
             <li className='nav-link'><Link to="/service"><IoIosBriefcase/>Services</Link></li>
@@ -141,7 +146,7 @@ const Welcome = () => {
         <div className='flex relative'>
             <div className={`main-wrapper transition-all px-4 py-3 max-h-[calc(100vh - 65px)] w-full `}>
                 <div className='flex justify-between items-center'>
-                    <h1>Welcome User</h1>
+                    <h1>Welcome {name}</h1>
                     {/* <Searchbar setIsSeach={setIsSeach} setKeyword={setKeyword}/> */}
                 </div>
             

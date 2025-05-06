@@ -20,9 +20,9 @@ const Header = () => {
             <div className='header-language'>
                 <ul className='flex gap-4 text-stone-500 font-bold items-center'>
                     <li><DarkMode/></li>
-                    <li className='hover:text-accent transition-all cursor-pointer'>FRA</li>
+                    {/* <li className='hover:text-accent transition-all cursor-pointer'>FRA</li>
                     <li className='hover:text-accent transition-all cursor-pointer'>FER</li>
-                    <li className='text-accent cursor-pointer'>ENG</li>
+                    <li className='text-accent cursor-pointer'>ENG</li> */}
                 </ul>
             </div>
         </header> 
