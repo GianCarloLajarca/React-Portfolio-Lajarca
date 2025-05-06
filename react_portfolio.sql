@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2024 at 02:57 PM
+-- Generation Time: May 20, 2024 at 04:29 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -104,7 +104,7 @@ CREATE TABLE `certificate` (
 --
 
 INSERT INTO `certificate` (`certificate_aid`, `certificate_title`, `certificate_photo`, `certificate_is_active`, `certificate_publish_date`, `certificate_date`, `certificate_organization`, `certificate_created`, `certificate_datetime`) VALUES
-(1, 'CompTIA IT Fundamentals ITF+ Certification', '../../img/home/cert-1.jpg', 1, '5/13/2024', 'July 2022', 'CompTIA', '2024-05-13 22:11:36', '2024-05-13 22:11:36'),
+(1, 'CompTIA IT Fundamentals ITF+ Certification', 'cert-1.jpg', 1, '5/13/2024', 'July 2022', 'CompTIA', '2024-05-13 22:11:36', '2024-05-20 22:28:50'),
 (2, 'SAP Certified Application Associate - SAP Business', '../../img/home/cert-2.jpg', 1, '5/13/2024', 'December 2022', 'FIT Academy', '2024-05-13 22:12:38', '2024-05-13 22:12:38'),
 (3, 'Skills To Succeed Academy Certificate of Achieveme', '../../img/home/cert-3.jpg', 1, '5/13/2024', 'March 2023', 'Accenture', '2024-05-13 22:13:20', '2024-05-13 22:13:34'),
 (4, 'Gotta Catch-Em All: Introduction to Digital Forens', '../../img/home/cert-4.jpg', 1, '5/13/2024', 'March 2023', 'Junior Philippine Computer Society - Mapúa University', '2024-05-13 22:14:03', '2024-05-13 22:21:13'),
@@ -404,7 +404,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_aid`, `user_is_active`, `user_name`, `user_email`, `user_key`, `user_password`, `user_created`, `user_datetime`) VALUES
-(1, 1, 'Gian Carlo Lajarca', 'gianlajarca14@gmail.com', '', '$2y$10$yctlendOeUr3ata.2lDJnO/.6otCMibWuic11gP7UAIuh8.S.GgIC', '2024-05-20 20:34:55', '2024-05-20 20:37:03');
+(1, 1, 'Gian Carlo Lajarca', 'gianlajarca14@gmail.com', '', '$2y$10$yctlendOeUr3ata.2lDJnO/.6otCMibWuic11gP7UAIuh8.S.GgIC', '2024-05-20 20:34:55', '');
 
 --
 -- Indexes for dumped tables
